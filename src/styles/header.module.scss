@@ -3,7 +3,6 @@
 .header {
   position: sticky;
   width: 100%;
-  padding: 20px 0;
   background-color: #fff;
 
   .container {
@@ -11,11 +10,15 @@
     justify-content: space-between;
     margin: 0 auto;
     padding: 0 15px;
-    max-width: 1200px;
+    max-width: 1800px;
+    height: 80px;
 
     .logo {
       @include font(40px, 900, #fff);
+      display: flex;
+      align-items: center;
       padding: 5px 25px;
+      margin: 10px 0;
       border-radius: 10px;
       background-color: rgb(48, 184, 48);
     }

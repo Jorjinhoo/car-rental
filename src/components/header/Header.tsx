@@ -19,7 +19,7 @@ const Header: FC = () => {
     <div className={styles.header}>
       <div className={styles.container}>
 
-        <Link to="/" className={styles.logo}>Logo</Link>
+        <Link to="/" className={styles.logo}>FreeR</Link>
         {windowWidth <= 700 ? <MobileNav /> : <DesctopNav />}
 
       </div>
