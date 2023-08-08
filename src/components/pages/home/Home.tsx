@@ -1,12 +1,11 @@
 import React from "react";
 
-
-const DesctopNav = () => {
+const Home = () => {
   return(
     <div>
-
+        
     </div>
   )
 }
 
-export default DesctopNav;
+export default Home;
