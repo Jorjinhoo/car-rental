@@ -7,7 +7,21 @@ import MobileNav from "./MobileNav";
 import styles from "../../styles/header.module.scss";
 
 const Header: FC = () => {
+  const [scrolled, setScrolled] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -16,11 +30,11 @@ const Header: FC = () => {
   }, []);
 
   return (
-    <div className={styles.header}>
+    <div className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
 
         <Link to="/" className={styles.logo}>FreeR</Link>
-        {windowWidth <= 700 ? <MobileNav /> : <DesctopNav />}
+        {windowWidth <= 700 ? <MobileNav /> : <DesctopNav Scrolled={scrolled} />}
 
       </div>
     </div>

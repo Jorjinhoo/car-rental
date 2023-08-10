@@ -6,14 +6,17 @@ import LanguageMenu from "./LanguageMenu";
 
 import styles from "../../styles/desctopNav.module.scss"
 
+interface IDesctopNavProps {
+  Scrolled: boolean; 
+}
 
 
-const DesctopNav: FC = () => {
+const DesctopNav: FC<IDesctopNavProps> = ({Scrolled}) => {
 
   const { t } = useTranslation();
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${Scrolled ? styles.scrolled : ""}`}>
       <div className={styles.items}>
         <Link to="/" className={`${styles.item} ${styles.fitem}`}>{t('Home')}</Link>
         <Link to="/Offer" className={`${styles.item} ${styles.fitem}`}>{t('Offer')}</Link>
@@ -21,7 +24,7 @@ const DesctopNav: FC = () => {
       </div>
       <div className={styles.items}>
         <LanguageMenu />
-        <Link to="/Login" className={`${styles.item} ${styles.login}`}>Log in</Link>
+        <Link to="/Login" className={`${styles.item} ${styles.login}`}>{t('Log in')}</Link>
       </div>
     </div>
   )
