@@ -21,7 +21,8 @@
       transition: .3s;
       color: inherit;
 
-      &.login {
+      &.login,
+      &.logout {
         margin-right: 0;
         padding: 8px;
         border: 3px solid rgb(48, 184, 48);
@@ -31,6 +32,13 @@
         &:hover {
           background-color: rgb(48, 184, 48);
           color: #fff;
+        }
+      }
+
+      &.logout {
+        &:hover {
+          background-color: rgb(175, 42, 42);
+          border-color: rgb(175, 42, 42);
         }
       }
     }

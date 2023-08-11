@@ -1,6 +1,7 @@
-import React, {FC} from "react";
+import React, {FC, useState} from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+
 
 import LanguageMenu from "./LanguageMenu";
 
@@ -12,8 +13,12 @@ interface IDesctopNavProps {
 
 
 const DesctopNav: FC<IDesctopNavProps> = ({Scrolled}) => {
-
+  const [isLogin, setIsLogin] = useState(localStorage.getItem('user'));
   const { t } = useTranslation();
+
+  const handleLogout = () => {
+    localStorage.clear();
+  }
 
   return (
     <div className={`${styles.container} ${Scrolled ? styles.scrolled : ""}`}>
@@ -24,7 +29,12 @@ const DesctopNav: FC<IDesctopNavProps> = ({Scrolled}) => {
       </div>
       <div className={styles.items}>
         <LanguageMenu />
-        <Link to="/Login" className={`${styles.item} ${styles.login}`}>{t('Log in')}</Link>
+        { 
+          isLogin ?
+            <Link to="/Home" onClick={handleLogout} className={`${styles.item} ${styles.logout}`}>{t('Log out')}</Link>
+            :
+            <Link to="/Login" className={`${styles.item} ${styles.login}`}>{t('Log in')}</Link>
+        }
       </div>
     </div>
   )

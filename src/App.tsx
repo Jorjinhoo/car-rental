@@ -6,7 +6,9 @@ import AppRouter from "./components/AppRouter";
 
 
 
+
 const App = () => {
+
   return (
      <BrowserRouter>
       <Header />
