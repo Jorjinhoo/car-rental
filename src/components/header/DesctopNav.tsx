@@ -1,9 +1,11 @@
-import React, {FC, useState} from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-
+import { useDispatch } from 'react-redux';
 
 import LanguageMenu from "./LanguageMenu";
+import useAuth from '../../hooks/use-auth';
+import { clearUser } from '../../store/slices/userSlice';
 
 import styles from "../../styles/desctopNav.module.scss"
 
@@ -13,11 +15,12 @@ interface IDesctopNavProps {
 
 
 const DesctopNav: FC<IDesctopNavProps> = ({Scrolled}) => {
-  const [isLogin, setIsLogin] = useState(localStorage.getItem('user'));
+  const isAuthenticated = useAuth();
+  const dispatch = useDispatch();
   const { t } = useTranslation();
 
   const handleLogout = () => {
-    localStorage.clear();
+    dispatch(clearUser());
   }
 
   return (
@@ -30,8 +33,8 @@ const DesctopNav: FC<IDesctopNavProps> = ({Scrolled}) => {
       <div className={styles.items}>
         <LanguageMenu />
         { 
-          isLogin ?
-            <Link to="/Home" onClick={handleLogout} className={`${styles.item} ${styles.logout}`}>{t('Log out')}</Link>
+          isAuthenticated ?
+            <Link to="/" onClick={handleLogout} className={`${styles.item} ${styles.logout}`}>{t('Log out')}</Link>
             :
             <Link to="/Login" className={`${styles.item} ${styles.login}`}>{t('Log in')}</Link>
         }
