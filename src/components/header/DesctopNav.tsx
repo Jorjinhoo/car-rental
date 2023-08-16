@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 
-import LanguageMenu from "./LanguageMenu";
+import LanguageOrCurrencyMenu from "./CurrencyLanguageMenu";
 import useAuth from '../../hooks/use-auth';
 import { clearUser } from '../../store/slices/userSlice';
 
@@ -31,7 +31,8 @@ const DesctopNav: FC<IDesctopNavProps> = ({Scrolled}) => {
         <Link to="/About" className={`${styles.item} ${styles.fitem}`}>{t('About')}</Link>
       </div>
       <div className={styles.items}>
-        <LanguageMenu />
+        <LanguageOrCurrencyMenu menuType="Lan" />
+        <LanguageOrCurrencyMenu menuType="Cur" />
         { 
           isAuthenticated ?
             <Link to="/" onClick={handleLogout} className={`${styles.item} ${styles.logout}`}>{t('Log out')}</Link>
