@@ -23,11 +23,13 @@ const Footer = () => {
           </div>
           <div className={styles.infoList}>
             <ul>
-              <li>{t('About Us')}</li>
-              <li>{t('Car Types')}</li>
               <li>{t('Contacts')}</li>
               <li>{t('Documents')}</li>
               <li>{t('Help')}</li>
+            </ul>
+            <ul>
+              <li>{t('About Us')}</li>
+              <li>{t('Car Types')}</li>
             </ul>
           </div>
         </div>

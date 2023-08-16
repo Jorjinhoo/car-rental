@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef, FC } from "react";
 import { useTranslation } from 'react-i18next';
+import { useDispatch } from "react-redux";
+
+import { setCurrency } from "../../store/slices/currencySlice";
 
 import styles from "../../styles/desctopNav.module.scss";
 import stylesMenu from "../../styles/languageMenu.module.scss";
@@ -17,6 +20,7 @@ const LanguageOrCurrencyMenu: FC<MenuType> = ({menuType}) => {
   const menuRef = useRef<HTMLDivElement | null>(null);
 
   const { i18n } = useTranslation();
+  const dispatch = useDispatch();
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -30,6 +34,7 @@ const LanguageOrCurrencyMenu: FC<MenuType> = ({menuType}) => {
 
   const selectCurrency = (currency: string) => {
     setSelectedCurrency(currency);
+    dispatch(setCurrency(currency));
     setMenuOpen(false);
   }
 

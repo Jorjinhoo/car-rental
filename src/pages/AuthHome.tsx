@@ -1,5 +1,5 @@
 
-
+import Header from "../components/header/Header";
 
 const AuthHome = () => {
   return(

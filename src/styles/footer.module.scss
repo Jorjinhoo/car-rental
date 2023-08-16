@@ -29,16 +29,21 @@
       }
 
       .infoList {
+        display: flex;
         padding-top: 20px;
         margin-right: 70px;
-  
-        li {
-          transition: .4s;
-          cursor: pointer;
-          margin-top: 15px;
-  
-          &:hover {
-            text-decoration: underline;
+
+        ul {
+          margin-right: 30px;
+
+          li {
+            transition: .4s;
+            cursor: pointer;
+            margin-top: 15px;
+    
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
