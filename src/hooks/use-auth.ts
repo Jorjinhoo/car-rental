@@ -4,15 +4,23 @@ import { useSelector } from 'react-redux';
 
 interface RootState {
   auth: {
-    user: null | object;
+    user: boolean,
+    userDetails: {
+      displayName: string | null,
+      email: string | null,
+      uid: string | null,
+    }
   };
 }
 
 const useAuth = () => {
-  const user = useSelector((state: RootState) => state.auth.user);
-  const isAuthenticated = !!user;
+  const isAuthenticated = useSelector((state: RootState) => state.auth.user);
+  const userDetails = useSelector((state: RootState) => state.auth.userDetails);
 
-  return isAuthenticated;
+  return {
+    isAuthenticated,
+    userDetails,
+  };
 }
 
 export default useAuth;

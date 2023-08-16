@@ -1,0 +1,80 @@
+@import "./utils/mixins";
+
+.footer {
+  width: 100%;
+  background-color: rgb(37, 116, 37);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    .infoContainer {
+      @include font(18px, 600, #fff);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 20px;
+
+      .infoFull {
+
+        .infoLogo {
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
+
+        .infoCopyright {
+          @include font(15px, 500, #dfdada)
+        }
+      }
+
+      .infoList {
+        padding-top: 20px;
+        margin-right: 70px;
+  
+        li {
+          transition: .4s;
+          cursor: pointer;
+          margin-top: 15px;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .iconsContainer {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 20px 0 20px;
+      border-top: 2px solid #fff;
+
+      .icons {
+
+        .icon {
+          margin: 15px 20px;
+          font-size: 40px;
+          color: #fff;
+          transition: .3s;
+          cursor: pointer;
+  
+          &:hover {
+            opacity: .6;
+          }
+        }
+
+        .icon:first-child {
+          margin-left: 0;
+        }
+
+        .iconSeconds {
+          &:hover {
+            opacity: 1;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}

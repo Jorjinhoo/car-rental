@@ -15,7 +15,7 @@ interface IDesctopNavProps {
 
 
 const DesctopNav: FC<IDesctopNavProps> = ({Scrolled}) => {
-  const isAuthenticated = useAuth();
+  const { isAuthenticated } = useAuth();
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
