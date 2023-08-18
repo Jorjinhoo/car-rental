@@ -1,0 +1,56 @@
+@import "../styles/utils/mixins.scss";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  form {
+    margin: 50px 0;
+    padding: 40px 180px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    .header {
+      @include font(35px, 800, black);
+      margin-bottom: 30px
+    }
+
+    .formItems {
+      display: flex;
+      margin-bottom: 30px;
+
+      input {
+        @include font(15px, 500, rgb(90, 86, 86));
+        width: 550px;
+        height: 50px;
+        padding-left: 10px;
+        border: 2px solid rgb(201, 198, 198);
+        border-radius: 10px 0 0 10px;
+  
+        &:focus {
+          border: 2px solid rgb(70, 182, 70);
+          outline: none;
+        }
+      }
+      
+      button {
+        @include font(20px, 500, #fff);
+        width: 200px;
+        height: 54px;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        cursor: pointer;
+        background-color: rgb(70, 182, 70);
+  
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}

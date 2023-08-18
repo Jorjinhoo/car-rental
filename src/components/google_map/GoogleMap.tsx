@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import { GoogleMap, Marker, LoadScript, InfoWindow } from '@react-google-maps/api';
 
+import styles from "../../styles/googleMap.module.scss";
+
 const GoogleMapComponent = () => {
 
   const [infoWindow, setInfoWindow] = useState<number | null>(null);
@@ -12,11 +14,6 @@ const GoogleMapComponent = () => {
     { lat: 53.13352628393782, lng: 23.171341339475365, description: "City, Random Street 4, 38" },
     { lat: 52.4054453350319, lng: 20.425759085155647, description: "City, Random Street 5, 01-55" },
   ];
-
-  const containerStyle = {
-    width: '100%',
-    height: '600px',
-  };
 
   const center = {
     lat: 51.793686,
@@ -34,7 +31,7 @@ const GoogleMapComponent = () => {
 
   return (
     <LoadScript googleMapsApiKey={`${process.env.REACT_APP_MAP_API_KEY}`}>
-      <GoogleMap mapContainerStyle={containerStyle} 
+      <GoogleMap mapContainerClassName={styles.container} 
                  center={center} 
                  zoom={6.2}
                  onClick={handleMapClick}

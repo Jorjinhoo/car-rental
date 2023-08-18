@@ -1,0 +1,28 @@
+@import "./utils/mixins.scss";
+
+.container {
+  margin: 0 auto;
+  max-width: 1920px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .sliderBttn {
+    @include font(60px, 600, #807f7f);
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      color: #4b4a4a;
+    }
+  }
+
+  .cardContainer {
+    display: flex;
+    padding: 30px 10px;
+  }
+}

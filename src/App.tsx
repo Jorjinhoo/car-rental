@@ -10,11 +10,11 @@ import AppRouter from "./components/AppRouter";
 const App = () => {
 
   return (
-     <BrowserRouter>
+    <BrowserRouter>
       <Header />
       <AppRouter />
       <Footer />
-     </BrowserRouter>
+    </BrowserRouter>
   )
 }
 

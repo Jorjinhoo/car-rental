@@ -2,10 +2,21 @@
 
 
 .firstSection {
-  position: relative;
-  height: 1030px;
   width: 100%;
-  background-image: url('../../public/imgs/first-frame-car.jpg');
-  background-size: cover;
+
+  .container {
+    position: relative;
+    height: 1030px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url('../../public/imgs/first-frame-car.jpg');
+    background-size: cover;
+  }
   
+}
+
+.thirdSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

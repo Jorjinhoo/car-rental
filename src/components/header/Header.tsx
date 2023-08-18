@@ -35,7 +35,7 @@ const Header: FC = () => {
       <div className={styles.container}>
 
         <Link to="/" className={styles.logo}>FreeR</Link>
-        {windowWidth <= 700 ? <MobileNav /> : <DesctopNav Scrolled={scrolled} />}
+        {windowWidth <= 850 ? <MobileNav /> : <DesctopNav Scrolled={scrolled} />}
 
       </div>
     </div>
