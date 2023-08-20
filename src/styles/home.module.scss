@@ -1,16 +1,28 @@
-
+@import "../styles/utils/mixins.scss";
 
 
 .firstSection {
   width: 100%;
 
   .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     height: 1030px;
     max-width: 1920px;
     margin: 0 auto;
     background-image: url('../../public/imgs/first-frame-car.jpg');
     background-size: cover;
+
+    .title {
+      @include font(60px, 400, #ffffff);
+    }
+
+    .title2 {
+      @include font(40px, 400, #fff);
+    }
   }
   
 }
