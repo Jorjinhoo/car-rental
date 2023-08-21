@@ -11,6 +11,10 @@ interface Car {
   enginePower: string;
   burning: string;
   price: number;
+  availability: {
+    from:string;
+    to: string;
+  }
 }
 
 interface CarsState {

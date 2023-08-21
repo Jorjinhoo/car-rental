@@ -41,8 +41,8 @@
       button {
         @include font(20px, 500, #fff);
         width: 200px;
-        height: 54px;
-        border: none;
+        height: 50px;
+        border: 2px solid rgb(70, 182, 70);
         border-radius: 0 10px 10px 0;
         cursor: pointer;
         background-color: rgb(70, 182, 70);

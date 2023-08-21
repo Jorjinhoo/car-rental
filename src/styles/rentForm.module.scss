@@ -1,10 +1,30 @@
+@import "./utils/mixins.scss";
 
+.form {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: rgb(48, 184, 48);
+  border-radius: 10px;
 
-
-.container {
-
-  .form {
+  .selectDate {
     display: flex;
+    justify-content: center;
 
+  }
+
+  .submit {
+    @include font(18px, 400, #fff);
+    background-color: rgb(255, 166, 0);
+    height: 65px;
+    width: 120px;
+    margin-left: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: .9;
+    }
   }
 }

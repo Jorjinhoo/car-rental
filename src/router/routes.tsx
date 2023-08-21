@@ -1,8 +1,8 @@
-import { AUTH_HOME_ROUTE, HOME_ROUTE, LOGIN_ROUTE, SIGNUP_ROUTE } from "./consts";
+import { AUTH_HOME_ROUTE, HOME_ROUTE, LOGIN_ROUTE, SELECTED_PERIOD } from "./consts";
 import Login from "../pages/Login";
 import AuthHome from "../pages/AuthHome";
 import Home from "../pages/Home";
-import Signup from "../pages/Signup";
+import SelectedPeriod from "../pages/SelectedPeriod";
 
 interface IRoute {
   path: string;
@@ -19,8 +19,8 @@ export const publicRoutes: IRoute[] = [
     Component: Login
   },
   {
-    path: SIGNUP_ROUTE,
-    Component: Signup
+    path: SELECTED_PERIOD,
+    Component: SelectedPeriod
   }
 ];
 
@@ -28,5 +28,9 @@ export const privateRoutes: IRoute[] = [
   {
     path: AUTH_HOME_ROUTE,
     Component: AuthHome
+  },
+  {
+    path: SELECTED_PERIOD,
+    Component: SelectedPeriod
   }
 ];

@@ -2,7 +2,6 @@ import { FC } from "react";
 import Select from "react-select";
 import { Controller } from "react-hook-form";
 
-import styles from "../../styles/placeSelector.module.scss";
 
 interface Props {
   control: any;
@@ -22,6 +21,7 @@ const placeOptions: PlaceOption[] = [
 ];
 
 const PlaceSelector: FC<Props> = ({control}) => {
+
   return(
     <Controller
     name="pickupPlace"
@@ -29,9 +29,19 @@ const PlaceSelector: FC<Props> = ({control}) => {
     rules={{ required: true }}
     render={({ field }) => (
       <Select
-        className={styles.select}
         options={placeOptions}
         {...field}
+        placeholder="Pick-up place"
+        styles={{
+          control: (baseStyles, state) => ({
+            ...baseStyles,
+            height: '65px',
+            width: '500px',
+            borderRadius: '5px',
+            marginRight: '5px',
+            cursor: 'pointer',
+          }),
+        }}
       />
     )}
   />

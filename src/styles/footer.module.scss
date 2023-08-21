@@ -1,7 +1,8 @@
 @import "./utils/mixins";
 
 .footer {
-  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   background-color: rgb(37, 116, 37);
 
   .container {
@@ -56,6 +57,7 @@
       border-top: 2px solid #fff;
 
       .icons {
+        display: flex;
 
         .icon {
           margin: 15px 20px;
