@@ -1,7 +1,53 @@
+@import "../styles/utils/mixins.scss";
 
 .container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: 0 auto;
   justify-content: center;
-  height: 500px;
+
+  .header {
+    position: relative;
+    @include font(35px, 400, #0e0d0d);
+    margin: 20px auto;
+    padding: 0 20px;
+
+    &::before, 
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%; 
+      width: 110%;
+      height: 2px; 
+      background-color: green; 
+    }
+
+    &::before {
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    &::after {
+      right: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  .rentForm {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 400px;
+   background-image: url('../../public/imgs/first-frame-car.jpg');
+   background-size: cover;
+   border-bottom: 2px solid rgb(55, 167, 55);
+  }
+
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }

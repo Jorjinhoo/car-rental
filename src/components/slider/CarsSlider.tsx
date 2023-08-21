@@ -40,7 +40,7 @@ const CarsSlider = () => {
       </div>
       <div className={styles.cardContainer}>
         {visibleCars.map((car) => (
-          <CarCard key={car.id} car={car} />
+          <CarCard key={car.id} car={car} cardType={"homeSlider"} />
         ))}
       </div>
       <div className={styles.sliderBttn} onClick={showNextCards}>

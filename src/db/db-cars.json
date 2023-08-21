@@ -12,8 +12,9 @@
       "price": 130,
       "availability": {
         "from": "2023-08-22",
-        "to": "all"
-      }
+        "to": "2023-08-29"
+      },
+      "place": "City, Random Street 2, 01-110"
     },
     {
       "id": 2,
@@ -28,7 +29,8 @@
       "availability": {
         "from": "2023-08-27",
         "to": "2023-08-29"
-      }
+      },
+      "place": "City, Random Street 1, 01-54"
     },
     {
       "id": 3,
@@ -42,8 +44,9 @@
       "price": 130,
       "availability": {
         "from": "2023-09-22",
-        "to": "all"
-      }
+        "to": "2023-10-22"
+      },
+      "place": "City, Random Street 1, 01-54"
     },
     {
       "id": 4,
@@ -57,8 +60,9 @@
       "price": 130,
       "availability": {
         "from": "2023-08-22",
-        "to": "all"
-      }
+        "to": "2023-09-22"
+      },
+      "place": "City, Random Street 3, 03-53"
     },
     {
       "id": 5,
@@ -72,8 +76,9 @@
       "price": 130,
       "availability": {
         "from": "2023-08-29",
-        "to": "all"
-      }
+        "to": "2023-08-29"
+      },
+      "place": "City, Random Street 3, 03-53"
     },
     {
       "id": 6,
@@ -87,8 +92,9 @@
       "price": 130,
       "availability": {
         "from": "2023-08-22",
-        "to": "2023-09-22"
-      }
+        "to": "2023-08-28"
+      },
+      "place": "City, Random Street 4, 38"
     },
     {
       "id": 7,
@@ -103,7 +109,8 @@
       "availability": {
         "from": "2023-08-22",
         "to": "2023-08-27"
-      }
+      },
+      "place": "City, Random Street 4, 38"
     },
     {
       "id": 8,
@@ -118,7 +125,8 @@
       "availability": {
         "from": "2023-08-22",
         "to": "2023-08-23"
-      }
+      },
+      "place": "City, Random Street 1, 01-54"
     }
   ]
 }

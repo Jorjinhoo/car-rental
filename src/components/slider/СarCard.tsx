@@ -16,13 +16,19 @@ interface Car {
   enginePower: string;
   burning: string;
   price: number;
+  availability: {
+    from:string;
+    to: string;
+  };
+  place: string;
 }
 
 interface CarCardProps {
   car: Car;
+  cardType: string;
 }
 
-const CarCard: FC<CarCardProps> = ({ car }) => {
+const CarCard: FC<CarCardProps> = ({ car, cardType }) => {
 
   const { t } = useTranslation();
   const selectedCurrency = useSelector((state: RootState) => state.currency.selectedCurrency);
@@ -30,7 +36,7 @@ const CarCard: FC<CarCardProps> = ({ car }) => {
   const price = selectedCurrency === "USD" ? `${car.price} USD` : `${car.price * 4} PLN`;
 
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${ cardType === "listCard" && styles.card2}`}>
       <img className={styles.carImage} src={car.image} alt={`Car ${car.id}`} />
       <p className={styles.title}>{car.name}</p>
       <div className={styles.items}>
@@ -39,6 +45,13 @@ const CarCard: FC<CarCardProps> = ({ car }) => {
         <div className={styles.item}><div>{t('Seats: ')}</div>{car.numberOfSeats}</div>
         <div className={styles.item}><div>{t('Power: ')}</div>{car.enginePower}</div>
         <div className={styles.item}><div>{t('Fuel Consumption: ')}</div>{car.burning}</div>
+        {cardType === "listCard" && 
+          (<>
+            <div className={styles.item}><div>{t('available from: ')}</div>{car.availability.from}</div>
+            <div className={styles.item}><div>{t('available to: ')}</div>{car.availability.to}</div>
+            <div className={styles.item}><div>{t('place: ')}</div>{car.place}</div>
+          </>)
+        }
       </div>
       <div className={styles.price}>{t('Price: ')}<div className={styles.amount}>{price}</div></div>
       <div className={styles.selectBttn}>{t('Select')}</div>

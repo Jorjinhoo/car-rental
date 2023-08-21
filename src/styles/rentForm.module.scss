@@ -8,10 +8,22 @@
   background-color: rgb(48, 184, 48);
   border-radius: 10px;
 
+  .error {
+    @include font(14px, 400, #fff);
+    position: absolute;
+    margin-top: 100px;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: rgb(255, 81, 0);
+  }
+
   .selectDate {
     display: flex;
     justify-content: center;
 
+    .error {
+      margin-top: 70px;
+    }
   }
 
   .submit {

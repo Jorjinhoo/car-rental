@@ -14,7 +14,8 @@ interface Car {
   availability: {
     from:string;
     to: string;
-  }
+  };
+  place: string;
 }
 
 interface CarsState {
