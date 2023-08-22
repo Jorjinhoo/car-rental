@@ -3,13 +3,13 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import { setRentFormData } from "../../store/slices/rentFormDataSlice";
-import DateSelector from "./DateSelector";
-import PlaceSelector from "./PlaceSelector";
+import { setRentFormData } from "../../../store/slices/rentFormDataSlice";
+import DateSelector from "../selectors/DateSelector";
+import PlaceSelector from "../selectors/PlaceSelector";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-import styles from "../../styles/rentForm.module.scss";
+import styles from "../../../styles/rentForm.module.scss";
 
 interface IData {
   pickupPlace: { value: string; label: string };

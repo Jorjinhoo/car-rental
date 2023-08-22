@@ -6,7 +6,7 @@ import { addDays, format } from 'date-fns';
 import { AiOutlineCalendar } from "react-icons/ai";
 
 import "react-datepicker/dist/react-datepicker.css";
-import styles from "../../styles/dateSelector.module.scss";
+import styles from "../../../styles/dateSelector.module.scss";
 
 interface Props {
   name: string;
@@ -15,12 +15,15 @@ interface Props {
   secondSelectedDate: Date | null;
   setSelectedDate: (date: Date | null) => void;
   labelName: string;
+  minDate?: string;
+  maxDate?: string;
 }
 
-const DateSelector: FC<Props> = ({name, control, firstSelectedDate, secondSelectedDate, setSelectedDate, labelName}) => {
+const DateSelector: FC<Props> = ({name, control, firstSelectedDate, secondSelectedDate, setSelectedDate, labelName, minDate, maxDate}) => {
 
-  const minPickupDate = new Date();
-  const tomorrowDate = addDays(minPickupDate, 1);
+  const minPickupDate = minDate ? new Date(minDate) : new Date();
+  const tomorrowDate = addDays(minPickupDate, 1); 
+  const maxPickupDate = maxDate ? new Date(maxDate) : null;
 
   const highlightedDates = firstSelectedDate !== null && secondSelectedDate !== null
   ? [firstSelectedDate, secondSelectedDate]
@@ -52,6 +55,7 @@ const DateSelector: FC<Props> = ({name, control, firstSelectedDate, secondSelect
                 highlightDates={highlightedDates}
                 startDate={firstSelectedDate}
                 endDate={secondSelectedDate}
+                maxDate={maxPickupDate}
               />
             )}
           />

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { RootState } from '../../store/index';
-import CarCard from './СarCard';
+import CarCard from '../car_cards/СarCard';
 
 import styles from '../../styles/carsSlider.module.scss';
 

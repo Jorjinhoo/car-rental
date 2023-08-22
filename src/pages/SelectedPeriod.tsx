@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 
 import { RootState } from '../store';
-import RentForm from '../components/rent_form/RentForm';
-import CarCard from '../components/slider/СarCard';
+import RentForm from '../components/forms/rent_form/RentForm';
+import CarCard from '../components/car_cards/СarCard';
 
 import styles from "../styles/selectedPeriod.module.scss";
 

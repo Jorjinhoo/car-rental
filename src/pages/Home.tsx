@@ -3,7 +3,7 @@ import GoogleMapComponent from "../components/google_map/GoogleMap";
 
 import styles from "../styles/home.module.scss";
 import CarsSlider from "../components/slider/CarsSlider";
-import RentForm from "../components/rent_form/RentForm";
+import RentForm from "../components/forms/rent_form/RentForm";
 
 
 

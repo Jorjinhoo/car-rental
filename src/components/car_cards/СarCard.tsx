@@ -1,9 +1,12 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 import { RootState } from '../../store/index';
 
 import styles from "../../styles/carCard.module.scss"
+
 
 
 interface Car {
@@ -54,7 +57,7 @@ const CarCard: FC<CarCardProps> = ({ car, cardType }) => {
         }
       </div>
       <div className={styles.price}>{t('Price: ')}<div className={styles.amount}>{price}</div></div>
-      <div className={styles.selectBttn}>{t('Select')}</div>
+      <Link to={`/rentcar/${car.id}`} className={styles.selectBttn}>{t('Select')}</Link>
     </div>
   );
 };
