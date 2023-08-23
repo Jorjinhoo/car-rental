@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { Controller } from "react-hook-form";
 
+import styles from "../../../styles/input.module.scss";
+
 interface IProps {
   control: any;
   name: string;
@@ -30,6 +32,7 @@ const Input: FC<IProps> = ({control, name, placeholder, minLength, maxLenght, pa
           minLength={minL}
           maxLength={maxL}
           pattern={pat}
+          className={styles.input}
         />
       )}
     />

@@ -1,0 +1,47 @@
+@import "./utils/mixins.scss";
+
+.form {
+  width: 660px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(48, 184, 48);
+  margin: 50px 0;
+
+  .dateSelectors {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .inputs {
+    display: flex;
+    flex-wrap: wrap;
+
+    .input {
+      margin: 10px 10px 10px 0;
+    }
+
+    .radioInput {
+      @include font(15px, 400, #fff);
+      margin: 10px 40px 10px 0;
+    }
+  }
+
+  .paymentSelector {
+    width: 300px;
+    margin: 10px 0;
+  }
+
+  .submit {
+    @include font(20px, 400, #fff);
+    margin-top: 10px;
+    background-color: orange;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+}

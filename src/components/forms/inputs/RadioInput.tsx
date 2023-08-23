@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { Controller } from "react-hook-form";
 
+import styles from "../../../styles/radioInput.module.scss";
+
 interface IProps {
   control: any;
   name: string;
@@ -10,7 +12,7 @@ interface IProps {
 
 const RadioInput: FC<IProps> = ({ control, name, value, label }) => {
   return (
-    <div>
+    <div className={styles.container}>
       <label>
         <Controller
           name={name}
@@ -20,6 +22,7 @@ const RadioInput: FC<IProps> = ({ control, name, value, label }) => {
               {...field}
               type="radio"
               value={value}
+              className={styles.input}
             />
           )}
         />

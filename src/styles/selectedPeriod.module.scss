@@ -8,8 +8,8 @@
   justify-content: center;
 
   .header {
-    position: relative;
     @include font(35px, 400, #0e0d0d);
+    position: relative;
     margin: 20px auto;
     padding: 0 20px;
 

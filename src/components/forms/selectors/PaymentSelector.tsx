@@ -32,8 +32,8 @@ const PaymentSelector: FC<IProps> = ({control}) => {
         styles={{
           control: (baseStyles, state) => ({
             ...baseStyles,
-            height: '65px',
-            width: '500px',
+            height: '55px',
+            width: '300px',
             borderRadius: '5px',
             marginRight: '5px',
             cursor: 'pointer',

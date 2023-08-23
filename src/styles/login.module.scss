@@ -1,0 +1,69 @@
+@import "./utils/mixins.scss";
+
+.container {
+  max-width: 1920px;
+  height: 672px;
+  display: flex;
+  flex-direction: column;
+
+  .menuBackground {
+    height: 80px;
+    width: 100%;
+    background-color: rgb(37, 116, 37);
+  }
+
+  .loginGroup {
+    @include font(20px, 400, #313131);
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    .loginBTN {
+      @include font(17px, 400, #474747);
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      padding: 10px;
+      background-color: rgb(243, 243, 243);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: .4s;
+  
+      &:hover {
+        background-color: rgb(100, 175, 100);
+        color: #fff;
+      }
+  
+      .gogIcon {
+        font-size: 30px;
+        margin-right: 10px;
+      }
+    }
+
+    .signupBTN {
+      @include font(17px, 400, #474747);
+      margin-left: 20px;
+      padding: 10px;
+      background-color: rgb(243, 243, 243);
+      border-radius: 5px;
+      opacity: .7;
+      cursor: pointer;
+
+      &:hover::after {
+        content: "Coming soon";
+        position: absolute;
+        bottom: 480px;
+        left: 58%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        white-space: nowrap;
+        opacity: 1;
+      }
+  
+    }
+  }
+
+}
