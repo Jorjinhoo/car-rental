@@ -35,9 +35,15 @@ const Footer = () => {
         </div>
         <div className={styles.iconsContainer} >
           <div className={styles.icons}>
-            <AiOutlineInstagram className={styles.icon} />
-            <TiSocialFacebook className={styles.icon} />
-            <RiTelegramLine className={styles.icon} />
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <AiOutlineInstagram className={styles.icon} />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+              <TiSocialFacebook className={styles.icon} />
+            </a>
+            <a href="https://web.telegram.org/k/" target="_blank" rel="noopener noreferrer">
+              <RiTelegramLine className={styles.icon} />
+            </a>
            </div>
           <div className={styles.icons}>
             <LiaCcVisa className={`${styles.icon} ${styles.iconSeconds}`} />

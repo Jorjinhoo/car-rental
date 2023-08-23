@@ -9,7 +9,8 @@ const userSlice = createSlice({
     userDetails: {
       displayName: null,
       email: null,
-      uid: null, 
+      uid: null,
+      photoURL: null,
     },
   },
   reducers: {
@@ -18,12 +19,14 @@ const userSlice = createSlice({
       state.userDetails.displayName = action.payload.displayName;
       state.userDetails.email = action.payload.email;
       state.userDetails.uid = action.payload.uid;
+      state.userDetails.photoURL = action.payload.photoURL;
     },
     clearUser: (state) => {
       state.user = false;
       state.userDetails.displayName = null;
       state.userDetails.email = null;
       state.userDetails.uid = null;
+      state.userDetails.photoURL = null;
     },
   },
 });

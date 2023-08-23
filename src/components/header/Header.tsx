@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import DesctopNav from "./DesctopNav";
 import MobileNav from "./MobileNav"; 
+import useAuth from '../../hooks/use-auth';
 
 import styles from "../../styles/header.module.scss";
 
@@ -10,6 +11,9 @@ import styles from "../../styles/header.module.scss";
 const Header: FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+  const { isAuthenticated } = useAuth();
+  const path = isAuthenticated ? "/authhome" : "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,8 +38,8 @@ const Header: FC = () => {
     <div className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
 
-        <Link to="/" className={styles.logo}>FreeR</Link>
-        {windowWidth <= 850 ? <MobileNav /> : <DesctopNav Scrolled={scrolled} />}
+        <Link to={path} className={styles.logo}>FreeR</Link>
+        {windowWidth <= 850 ? <MobileNav path={path} /> : <DesctopNav Scrolled={scrolled} path={path} />}
 
       </div>
     </div>

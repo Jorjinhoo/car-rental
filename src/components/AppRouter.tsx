@@ -1,13 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 
 import { privateRoutes, publicRoutes } from "../router/routes";
-
+import useAuth from '../hooks/use-auth';
 
 
 const AppRouter = () => {
-  const user = false;
 
-  return user ? 
+  const { isAuthenticated } = useAuth();
+
+  return isAuthenticated ? 
     (
       <Routes>
         {privateRoutes.map(({path, Component}) =>

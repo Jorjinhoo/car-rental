@@ -10,11 +10,12 @@ import { clearUser } from '../../store/slices/userSlice';
 import styles from "../../styles/desctopNav.module.scss"
 
 interface IDesctopNavProps {
-  Scrolled: boolean; 
+  Scrolled: boolean;
+  path: string;
 }
 
 
-const DesctopNav: FC<IDesctopNavProps> = ({Scrolled}) => {
+const DesctopNav: FC<IDesctopNavProps> = ({Scrolled, path}) => {
   const { isAuthenticated } = useAuth();
   const dispatch = useDispatch();
   const { t } = useTranslation();
@@ -26,7 +27,7 @@ const DesctopNav: FC<IDesctopNavProps> = ({Scrolled}) => {
   return (
     <div className={`${styles.container} ${Scrolled ? styles.scrolled : ""}`}>
       <div className={styles.items}>
-        <Link to="/" className={`${styles.item} ${styles.fitem}`}>{t('Home')}</Link>
+        <Link to={path} className={`${styles.item} ${styles.fitem}`}>{t('Home')}</Link>
         <Link to="/Offer" className={`${styles.item} ${styles.fitem}`}>{t('Offer')}</Link>
         <Link to="/About" className={`${styles.item} ${styles.fitem}`}>{t('About')}</Link>
       </div>

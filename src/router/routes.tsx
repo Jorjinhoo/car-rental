@@ -37,5 +37,9 @@ export const privateRoutes: IRoute[] = [
   {
     path: SELECTED_PERIOD,
     Component: SelectedPeriod
+  },
+  {
+    path: RENT_CAR_ROUTE,
+    Component: RentCar
   }
 ];

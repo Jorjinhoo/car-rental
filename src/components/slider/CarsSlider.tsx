@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
 import { RootState } from '../../store/index';
@@ -14,15 +14,15 @@ const CarsSlider = () => {
   const [startIndex, setStartIndex] = useState(0);
   const endIndex = (startIndex + cardsToShow - 1) % totalCars;
 
-  const showPrevCards = () => {
+  const showPrevCards = useCallback(() => {
     setStartIndex((prevIndex) =>
       prevIndex === 0 ? totalCars - 1 : prevIndex - 1
     );
-  };
+  }, [totalCars]);
 
-  const showNextCards = () => {
+  const showNextCards = useCallback(() => {
     setStartIndex((prevIndex) => (prevIndex + 1) % totalCars);
-  };
+  }, [totalCars]);
 
   const visibleCars = [];
   let currentIndex = startIndex;
@@ -32,6 +32,18 @@ const CarsSlider = () => {
     currentIndex = (currentIndex + 1) % totalCars;
   }
   visibleCars.push(carsData[endIndex]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      showNextCards();
+    }, 4000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [startIndex, showNextCards]);
+
+  
 
   return (
     <div className={styles.container}>

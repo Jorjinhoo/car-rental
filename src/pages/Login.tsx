@@ -18,7 +18,9 @@ const Login = () => {
 
   const login = async () => {
     try {
-      const user = await signInWithPopup(auth, googleAuthProvider);
+      const userCredential = await signInWithPopup(auth, googleAuthProvider);
+      const user = userCredential.user
+      // console.log(user);
       dispatch(setUser(user));
       console.log(user);
       navigate('/authhome');

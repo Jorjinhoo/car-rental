@@ -1,8 +1,10 @@
-import React from "react";
+import { FC } from "react";
 
+interface IProps {
+  path: string;
+}
 
-
-const MobileNav = () => {
+const MobileNav: FC<IProps> = ({path}) => {
   return(
     <div>
 
