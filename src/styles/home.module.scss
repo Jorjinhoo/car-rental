@@ -6,16 +6,7 @@
   margin: 0 auto;
 
   .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 1030px;
-    max-width: 1920px;
-    margin: 0 auto;
-    background-image: url('../../public/imgs/first-frame-car.jpg');
-    background-size: cover;
+    @include formSection($height: 1030px, $borderBottom: none);
 
     .title {
       @include font(60px, 400, #ffffff);
@@ -29,7 +20,8 @@
 }
 
 .thirdSection {
-  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
 }

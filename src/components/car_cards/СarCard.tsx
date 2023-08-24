@@ -4,30 +4,13 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { RootState } from '../../store/index';
+import { ICar } from '../../interfaces/ICar';
 
 import styles from "../../styles/carCard.module.scss"
 
 
-
-interface Car {
-  id: number;
-  image: string;
-  name: string;
-  engineType: string;
-  transmission: string;
-  numberOfSeats: number;
-  enginePower: string;
-  burning: string;
-  price: number;
-  availability: {
-    from:string;
-    to: string;
-  };
-  place: string;
-}
-
 interface CarCardProps {
-  car: Car;
+  car: ICar;
   cardType: string;
 }
 

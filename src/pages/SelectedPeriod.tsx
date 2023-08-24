@@ -4,25 +4,10 @@ import { RootState } from '../store';
 import RentForm from '../components/forms/rent_form/RentForm';
 import CarCard from '../components/car_cards/СarCard';
 
+import { ICar } from '../interfaces/ICar';
+
 import styles from "../styles/selectedPeriod.module.scss";
 
-
-interface ICar {
-  id: number;
-  image: string;
-  name: string;
-  engineType: string;
-  transmission: string;
-  numberOfSeats: number;
-  enginePower: string;
-  burning: string;
-  price: number;
-  availability: {
-    from:string;
-    to: string;
-  };
-  place: string;
-}
 
 interface ISelectedPeriod {
   pickupDate: string | null;
@@ -74,17 +59,19 @@ const SelectedPeriod = () => {
   const filteredCars = filterCars(cars, selectedPeriod);
 
   return(
-    <div className={styles.container}>
+    <>
       <div className={styles.rentForm}>
-        <RentForm />
+          <RentForm />
+        </div>
+      <div className={styles.container}>
+        <div className={styles.header}>SEARCHING RESULTS</div>
+        <section className={styles.cardsContainer}>
+          {filteredCars.map((car) => (
+              <CarCard key={car.id} car={car} cardType="listCard" />
+            ))}
+        </section>
       </div>
-      <div className={styles.header}>SEARCHING RESULTS</div>
-      <section className={styles.cardsContainer}>
-        {filteredCars.map((car) => (
-            <CarCard key={car.id} car={car} cardType="listCard" />
-          ))}
-      </section>
-    </div>
+    </>
   )
 }
 

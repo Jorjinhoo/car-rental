@@ -1,25 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../index';
 
-interface Car {
-  id: number;
-  image: string;
-  name: string;
-  engineType: string;
-  transmission: string;
-  numberOfSeats: number;
-  enginePower: string;
-  burning: string;
-  price: number;
-  availability: {
-    from:string;
-    to: string;
-  };
-  place: string;
-}
+import { RootState } from '../index';
+import { ICar } from '../../interfaces/ICar';
+
 
 interface CarsState {
-  cars: Car[];
+  cars: ICar[];
 }
 
 const initialState: CarsState = {
@@ -30,7 +16,7 @@ const carsSlice = createSlice({
   name: 'cars',
   initialState,
   reducers: {
-    loadCars: (state, action: PayloadAction<Car[]>) => {
+    loadCars: (state, action: PayloadAction<ICar[]>) => {
       state.cars = action.payload;
     },
   },

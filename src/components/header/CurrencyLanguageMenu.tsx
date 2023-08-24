@@ -7,11 +7,11 @@ import { setCurrency } from "../../store/slices/currencySlice";
 import styles from "../../styles/desctopNav.module.scss";
 import stylesMenu from "../../styles/languageMenu.module.scss";
 
-interface MenuType {
+interface IMenuType {
   menuType: string
 }
 
-const LanguageOrCurrencyMenu: FC<MenuType> = ({menuType}) => {
+const LanguageOrCurrencyMenu: FC<IMenuType> = ({menuType}) => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("ENG");
   const [selectedCurrency, setSelectedCurrency] = useState<string>("USD");
 

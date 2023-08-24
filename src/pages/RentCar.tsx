@@ -15,16 +15,18 @@ const RentCar = () => {
   const carID = id ? +id : 1;
 
   return(
-    <div className={styles.container}>
-      <div className={styles.rentForm}>
+    <>
+      <div className={styles2.rentForm}>
         <RentForm />
       </div>
-      <CarDetailCard id={carID} />
-      <div className={styles2.orderTitle}>RESERVATION</div>
-      <div className={styles2.orderForm}>
-        <OrderForm id={carID} />
+      <div className={styles.container}>
+        <CarDetailCard id={carID} />
+        <div className={styles2.orderTitle}>RESERVATION</div>
+        <div className={styles2.orderForm}>
+          <OrderForm id={carID} />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

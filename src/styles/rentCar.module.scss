@@ -1,33 +1,12 @@
 @import "./utils/mixins.scss";
 
-
-.orderTitle {
- @include font(30px, 400, #000000);
- margin: 40px auto 0 auto;
- position: relative;
- padding: 0 20px;
-
- &::before, 
- &::after {
-   content: "";
-   position: absolute;
-   top: 50%; 
-   width: 110%;
-   height: 2px; 
-   background-color: green; 
- }
-
- &::before {
-   left: 0;
-   transform: translateX(-100%);
- }
-
- &::after {
-   right: 0;
-   transform: translateX(100%);
- }
+.rentForm {
+  @include formSection;
 }
 
+.orderTitle {
+ @include titleWithLines($lineWidth: 150%);
+}
 
 .orderForm {
   max-width: 1920px;

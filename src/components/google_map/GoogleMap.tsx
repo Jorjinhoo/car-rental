@@ -3,6 +3,8 @@ import { GoogleMap, Marker, LoadScript, InfoWindow } from '@react-google-maps/ap
 
 import styles from "../../styles/googleMap.module.scss";
 
+
+
 const GoogleMapComponent = () => {
 
   const [infoWindow, setInfoWindow] = useState<number | null>(null);

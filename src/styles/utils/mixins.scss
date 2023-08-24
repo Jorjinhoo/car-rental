@@ -9,3 +9,43 @@ $noto-sans-font: 'Noto Sans', sans-serif;
   color: $color;
   font-family: $fontFamily;
 }
+
+@mixin formSection($height: 400px, $borderBottom: 2px solid rgb(55, 167, 55)) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: $height;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-image: url('../../public/imgs/first-frame-car.jpg');
+  background-size: cover;
+  border-bottom: $borderBottom;
+}
+
+@mixin titleWithLines($fontSize: 35px, $fontColor: #0e0d0d, $lineWidth: 110%, $lineHeight: 2px, $lineColor: green) {
+  @include font($fontSize, 400, $fontColor);
+    position: relative;
+    margin: 20px auto;
+    padding: 0 20px;
+
+    &::before, 
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%; 
+      width: $lineWidth;
+      height: $lineHeight; 
+      background-color: $lineColor; 
+    }
+
+    &::before {
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    &::after {
+      right: 0;
+      transform: translateX(100%);
+    }
+}

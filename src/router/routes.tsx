@@ -1,9 +1,11 @@
-import { AUTH_HOME_ROUTE, HOME_ROUTE, LOGIN_ROUTE, RENT_CAR_ROUTE, SELECTED_PERIOD } from "./consts";
+import { ABOUT_US_ROUTE, AUTH_HOME_ROUTE, HOME_ROUTE, LOGIN_ROUTE, OFFER_ROUTE, RENT_CAR_ROUTE, SELECTED_PERIOD } from "./consts";
 import Login from "../pages/Login";
 import AuthHome from "../pages/AuthHome";
 import Home from "../pages/Home";
 import SelectedPeriod from "../pages/SelectedPeriod";
 import RentCar from "../pages/RentCar";
+import Offer from "../pages/Offer";
+import AboutUs from "../pages/AboutUs";
 
 interface IRoute {
   path: string;
@@ -26,6 +28,14 @@ export const publicRoutes: IRoute[] = [
   {
     path: RENT_CAR_ROUTE,
     Component: RentCar
+  },
+  {
+    path: OFFER_ROUTE,
+    Component: Offer
+  },
+  {
+    path: ABOUT_US_ROUTE,
+    Component: AboutUs
   }
 ];
 
@@ -41,5 +51,13 @@ export const privateRoutes: IRoute[] = [
   {
     path: RENT_CAR_ROUTE,
     Component: RentCar
+  },
+  {
+    path: OFFER_ROUTE,
+    Component: Offer
+  },
+  {
+    path: ABOUT_US_ROUTE,
+    Component: AboutUs
   }
 ];

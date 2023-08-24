@@ -1,0 +1,69 @@
+@import "./utils/mixins.scss";
+
+.inputContainer {
+  width: 530px;
+  height: 270px;
+
+  .label {
+    @include font(18px, 400, #2e2e2e);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    height: 270px;
+    width: 530px;
+    border: dashed 2px rgb(46, 150, 46);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+
+    .selectedFileName {
+      @include font(18px, 400, #525252);
+      transition: .3s;
+
+      .addedText {
+        @include font(20px, 400, #2c2c2c);
+        transition: .3s;
+      }
+    }
+
+    .img {
+      font-size: 60px;
+      margin-bottom: 10px;
+      transition: .3s;
+    }
+
+    .extraText {
+      @include font(16px, 400, #525252);
+      transition: .3s;
+    }
+
+    &:hover {
+      font-size: 20px;
+      background-color: rgb(181, 218, 181);
+      border: none;
+
+      .selectedFileName {
+        font-size: 20px;
+
+        .addedText {
+          font-size: 22px;
+        }
+      }
+
+      .img {
+        font-size: 65px;
+      }
+
+      .extraText {
+        font-size: 18px;
+      }
+    }
+  }
+   
+  .input {
+    display: none;
+  }
+}

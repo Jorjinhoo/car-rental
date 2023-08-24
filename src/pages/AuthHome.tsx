@@ -6,6 +6,7 @@ import { VscAccount } from "react-icons/vsc";
 
 import styles from "../styles/authHome.module.scss";
 import LastOrderCard from "../components/car_cards/LastOrderCard";
+import FileInput from "../components/forms/inputs/FileInput";
 
 const AuthHome = () => {
 
@@ -25,7 +26,9 @@ const AuthHome = () => {
               <div className={styles.item}>{user.userDetails.email}</div>
             </div>
           </div>
-          <div className={styles.someInfContainer}></div>
+          <div className={styles.someInfContainer}>
+            <FileInput />
+          </div>
         </div>
         <div className={styles.lasOrdContainer}>
           <LastOrderCard />

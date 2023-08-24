@@ -46,6 +46,9 @@
 
       .someInfContainer {
         @include font(24px, 600, #1a1a1a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 600px;
         height: 330px;
         border-radius: 10px;

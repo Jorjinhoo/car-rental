@@ -1,0 +1,77 @@
+@import "./utils/mixins.scss";
+
+.headerBcgrnd {
+  max-width: 1920px;
+  height: 80px;
+  background-color: rgb(54, 139, 54);
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    @include titleWithLines;
+  }
+
+  .section {
+    @include font(17px, 500, #464646);
+    max-width: 1400px;
+    line-height: 3;
+
+    .textTitle {
+      @include font(19px, 500, #000000);
+    }
+
+    .orangeText {
+      color: orange;
+    }
+
+    .infoList {
+      margin: 30px 0;
+      line-height: 2.3;
+
+      li {
+        list-style-type: disc;
+        margin-left: 40px;
+
+        &:first-child {
+          @include font(19px, 400, #000000);
+          list-style-type: none;
+          margin-left: 0;
+
+        }
+      }
+
+    }
+  }
+
+  .contactSection {
+
+    ul {
+      display: flex;
+      margin-bottom: 40px;
+      
+      li {
+        margin-right: 40px;
+        display: flex;
+
+        a {
+          margin-left: 10px;
+          cursor: pointer;
+          color: rgb(10, 106, 138);
+          transition: .3s;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

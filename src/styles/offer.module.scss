@@ -1,26 +1,26 @@
-@import "../styles/utils/mixins.scss";
+@import "./utils/mixins.scss";
 
-
-.rentForm {
+.formContainer {
   @include formSection;
- }
+}
 
- 
 .container {
   display: flex;
   flex-direction: column;
   max-width: 1920px;
   margin: 0 auto;
   justify-content: center;
+  align-items: center;
 
-  .header {
+  .title {
     @include titleWithLines;
   }
 
-  .cardsContainer {
+  .cardContainer {
+    max-width: 1700px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
   }
 }

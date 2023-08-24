@@ -12,24 +12,33 @@ const LastOrderCard = () => {
   const selectedCurrency = useSelector((state: RootState) => state.currency.selectedCurrency);
   
   const selectedCar = carsData.find(car => car.id === lastOrder.carID);
-  if (!selectedCar) return <div className={`${styles.card} ${styles.card2}`}><div>No orders yet</div></div>;
+  if (!selectedCar) return <div className={`${styles.card} ${styles.card2}`}>
+                              <div className={styles.title}>Last Order</div>
+                              <div>No orders yet</div>
+                            </div>;
 
 
   const price = selectedCurrency === "USD" ? selectedCar.price : selectedCar.price * 4;
 
-    const pickupDate = lastOrder.pickupDate ? new Date(lastOrder.pickupDate) : null;
-    const returnDate = lastOrder.returnDate ? new Date(lastOrder.returnDate) : null;
+  const pickupDate = lastOrder.pickupDate ? new Date(lastOrder.pickupDate) : null;
+  const returnDate = lastOrder.returnDate ? new Date(lastOrder.returnDate) : null;
 
-    let totalPrice: number = 0;
+  let totalPrice: number = 0;
 
+  console.log(pickupDate === returnDate);
+  
     if (pickupDate && returnDate) {
-
-      const timeDifference = returnDate.getTime() - pickupDate.getTime(); 
-      totalPrice = (timeDifference / (1000 * 60 * 60 * 24)) * price; 
+      if(pickupDate.getTime() === returnDate.getTime()) {
+        totalPrice = price;
+      }else {
+        const timeDifference = returnDate.getTime() - pickupDate.getTime(); 
+        totalPrice = (timeDifference / (1000 * 60 * 60 * 24)) * price + price; 
+      }
     } 
  
   return (
     <div className={styles.card}>
+      <div className={styles.title}>Last Order</div>
       <img className={styles.carIMG} src={selectedCar?.image} alt=''/>
       <div className={styles.carName}>{selectedCar?.name}</div>
       <div className={styles.orderData}>

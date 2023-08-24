@@ -29,7 +29,7 @@ const DesctopNav: FC<IDesctopNavProps> = ({Scrolled, path}) => {
       <div className={styles.items}>
         <Link to={path} className={`${styles.item} ${styles.fitem}`}>{t('Home')}</Link>
         <Link to="/Offer" className={`${styles.item} ${styles.fitem}`}>{t('Offer')}</Link>
-        <Link to="/About" className={`${styles.item} ${styles.fitem}`}>{t('About')}</Link>
+        <Link to="/aboutus" className={`${styles.item} ${styles.fitem}`}>{t('About')}</Link>
       </div>
       <div className={styles.items}>
         <LanguageOrCurrencyMenu menuType="Lan" />
