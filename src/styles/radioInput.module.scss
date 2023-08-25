@@ -1,8 +1,21 @@
 
 
 .container {
+  .label{
+    .input {
+      margin-right: 10px;
+    }
+  }
+}
 
-  .input {
-    margin-right: 10px;
+@media screen and (max-width: 400px) {
+  .container {
+    .label{
+      font-size: 12px;
+
+      .input {
+        margin-right: 3px;
+      }
+    }
   }
 }

@@ -5,6 +5,7 @@ import { Controller } from "react-hook-form";
 
 interface IProps {
   control: any;
+  placeholder: string;
 }
 
 interface IPaymentOption {
@@ -17,7 +18,20 @@ const paymentOptions: IPaymentOption[] = [
   { value: "Cash", label: "Cash" },
 ];
 
-const PaymentSelector: FC<IProps> = ({control}) => {
+const mediaQueryStyles = {
+  '@media screen and (max-width: 900px)': {
+    width: '350px',
+  },
+};
+
+const mediaQueryStyles2 = {
+  '@media screen and (max-width: 400px)': {
+    width: '250px',
+  },
+};
+
+const PaymentSelector: FC<IProps> = ({control, placeholder}) => {
+
 
   return(
     <Controller
@@ -28,7 +42,7 @@ const PaymentSelector: FC<IProps> = ({control}) => {
       <Select
         options={paymentOptions}
         {...field}
-        placeholder="Pick-up payment method"
+        placeholder={placeholder}
         styles={{
           control: (baseStyles, state) => ({
             ...baseStyles,
@@ -37,6 +51,9 @@ const PaymentSelector: FC<IProps> = ({control}) => {
             borderRadius: '5px',
             marginRight: '5px',
             cursor: 'pointer',
+
+            ...mediaQueryStyles,
+            ...mediaQueryStyles2,
           }),
         }}
       />

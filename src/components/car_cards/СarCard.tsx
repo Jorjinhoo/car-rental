@@ -33,9 +33,9 @@ const CarCard: FC<CarCardProps> = ({ car, cardType }) => {
         <div className={styles.item}><div>{t('Fuel Consumption: ')}</div>{car.burning}</div>
         {cardType === "listCard" && 
           (<>
-            <div className={styles.item}><div>{t('available from: ')}</div>{car.availability.from}</div>
-            <div className={styles.item}><div>{t('available to: ')}</div>{car.availability.to}</div>
-            <div className={styles.item}><div>{t('place: ')}</div>{car.place}</div>
+            <div className={styles.item}><div>{t('Available from: ')}</div>{car.availability.from}</div>
+            <div className={styles.item}><div>{t('Available to: ')}</div>{car.availability.to}</div>
+            <div className={styles.item}><div>{t('Place: ')}</div>{car.place}</div>
           </>)
         }
       </div>

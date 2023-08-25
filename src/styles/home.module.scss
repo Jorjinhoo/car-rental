@@ -16,7 +16,6 @@
       @include font(40px, 400, #fff);
     }
   }
-  
 }
 
 .thirdSection {
@@ -24,4 +23,42 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+}
+
+
+@media screen and (max-width: 1500px) {
+  .firstSection {
+
+    .container {
+      @include formSection($height: 830px, $borderBottom: none);
+  
+      .title {
+        @include font(45px, 400, #ffffff);
+      }
+  
+      .title2 {
+        @include font(33px, 400, #fff);
+      }
+    }
+    
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .firstSection {
+
+    .container {
+      @include formSection($height: 750px, $borderBottom: none);
+  
+      .title {
+        @include font(38px, 400, #ffffff);
+      }
+  
+      .title2 {
+        @include font(28px, 400, #fff);
+      }
+    }
+    
+  }
 }

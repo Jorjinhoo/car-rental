@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import NewsletterSub from "../components/newsletter_sub_form/NewsletterSub";
 import GoogleMapComponent from "../components/google_map/GoogleMap";
 
@@ -8,12 +10,15 @@ import RentForm from "../components/forms/rent_form/RentForm";
 
 
 const Home = () => {
+
+  const { t } = useTranslation();
+
   return(
     <div>
       <div className={styles.firstSection}>
         <div className={styles.container}>
-          <p className={styles.title}>Rent a car easily</p>
-          <p className={styles.title2}>Try It!</p>
+          <p className={styles.title}>{t('Rent a car easily')}</p>
+          <p className={styles.title2}>{t('Try It!')}</p>
           <RentForm />
         </div>
       </div>

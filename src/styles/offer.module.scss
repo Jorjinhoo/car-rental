@@ -24,3 +24,28 @@
     margin-bottom: 30px;
   }
 }
+
+
+@media screen and (max-width: 1180px) {
+  .container {
+    .title {
+      @include titleWithLines($fontSize: 28px, $lineWidth: 70%);
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    .title {
+      @include titleWithLines($fontSize: 22px, $lineWidth: 40%, $margin: 10px, $padding: 10px);
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    .title {
+      @include titleWithLines($fontSize: 18px, $lineWidth: 30%, $margin: 7px, $padding: 5px);
+    }
+  }
+}

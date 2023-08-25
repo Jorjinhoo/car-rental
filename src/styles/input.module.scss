@@ -6,3 +6,15 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 900px) {
+  .input {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .input {
+    width: 250px;
+  }
+}

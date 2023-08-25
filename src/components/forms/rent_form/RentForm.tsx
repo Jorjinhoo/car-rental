@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useTranslation } from 'react-i18next';
 
 import { setRentFormData } from "../../../store/slices/rentFormDataSlice";
 import DateSelector from "../selectors/DateSelector";
@@ -18,6 +19,8 @@ interface IData {
 }
 
 const RentForm = () => {
+
+  const { t } = useTranslation();
 
   const { control, handleSubmit, formState: { errors } } = useForm<IData>();
 
@@ -40,17 +43,17 @@ const RentForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form} id="reservationForm">
-      <PlaceSelector control={control} />
-      {errors.pickupPlace && <span className={styles.error}>This field is required</span>}
+      <PlaceSelector control={control} placeholder={t('Pick-up place')} />
+      {errors.pickupPlace && <span className={styles.error}>{t('This field is required')}</span>}
       <div className={styles.selectDate}>
         <DateSelector control={control} 
                       name={"pickupDate"} 
                       firstSelectedDate={firstSelectedDate} 
                       secondSelectedDate={secondSelectedDate} 
                       setSelectedDate={setFirstSelectedDate}
-                      labelName={"Pickup date"}
+                      labelName={t('Pickup date')}
                       />
-        {errors.pickupDate && <span className={styles.error}>This field is required</span>}
+        {errors.pickupDate && <span className={styles.error}>{t('This field is required')}</span>}
       </div>
       <div className={styles.selectDate}>
         <DateSelector control={control} 
@@ -58,11 +61,11 @@ const RentForm = () => {
                       firstSelectedDate={firstSelectedDate} 
                       secondSelectedDate={secondSelectedDate} 
                       setSelectedDate={setSecondSelectedDate}
-                      labelName={"Return date"}
+                      labelName={t('Return date')}
                       />
-        {errors.returnDate && <span className={styles.error}>This field is required</span>}
+        {errors.returnDate && <span className={styles.error}>{t('This field is required')}</span>}
       </div>
-      <input className={styles.submit} value="Search" type="submit" disabled={Object.keys(errors).length > 0} />
+      <input className={styles.submit} value={t('Search')} type="submit" disabled={Object.keys(errors).length > 0} />
     </form>
   );
 }

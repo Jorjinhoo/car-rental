@@ -1,8 +1,13 @@
 import { AiOutlineFileAdd } from "react-icons/ai";
-import { useState, useEffect, ChangeEvent } from "react"; // Импортируем useEffect
+import { useState, useEffect, ChangeEvent } from "react";
+import { useTranslation } from 'react-i18next';
+
 import styles from "../../../styles/fileInput.module.scss";
 
 const FileInput = () => {
+
+  const { t } = useTranslation();
+
   const [selectedFileName, setSelectedFileName] = useState(
     localStorage.getItem("selectedFileName") || ""
   );
@@ -33,13 +38,14 @@ const FileInput = () => {
       <label className={styles.label} htmlFor="file">
         {selectedFileName ? (
           <div className={styles.selectedFileName}>
-            <div className={styles.addedText}>Added driver's license</div>
-            Uploaded file: {selectedFileName}
+            <div className={styles.addedText}>{t("Added driver's license")}</div>
+            {t('Uploaded file: ')}{selectedFileName}
           </div>
         ) : (
           <>
-            <AiOutlineFileAdd className={styles.img} />Upload your driver licence
-            <div className={styles.extraText}>(select or drag a file)</div>
+            <AiOutlineFileAdd className={styles.img} />
+            {t('Upload your driver licence')}
+            <div className={styles.extraText}>{t('select or drag a file')}</div>
           </>
         )}
       </label>

@@ -8,7 +8,10 @@ import styles from '../../styles/carsSlider.module.scss';
 
 const CarsSlider = () => {
   const carsData = useSelector((state: RootState) => state.cars.cars);
-  const cardsToShow = 4;
+
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [cardsToShow, setCardsToShow] = useState(4);
+  
   const totalCars = carsData.length;
 
   const [startIndex, setStartIndex] = useState(0);
@@ -43,7 +46,29 @@ const CarsSlider = () => {
     };
   }, [startIndex, showNextCards]);
 
-  
+
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    switch (true) {
+      case windowWidth < 600:
+        setCardsToShow(1);
+        break;
+      case windowWidth < 800:
+        setCardsToShow(2);
+        break;
+      case windowWidth < 1100:
+        setCardsToShow(3);
+        break;
+      default:
+        setCardsToShow(4);
+    }
+  }, [windowWidth]); 
 
   return (
     <div className={styles.container}>

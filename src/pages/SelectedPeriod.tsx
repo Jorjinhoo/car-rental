@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { RootState } from '../store';
 import RentForm from '../components/forms/rent_form/RentForm';
@@ -17,6 +18,8 @@ interface ISelectedPeriod {
 
 
 const SelectedPeriod = () => {
+
+  const { t } = useTranslation();
 
   const selectedPeriod = useSelector((state: RootState) => state.rentFormData.dataToSend);
   const cars = useSelector((state: RootState) => state.cars.cars);
@@ -64,7 +67,7 @@ const SelectedPeriod = () => {
           <RentForm />
         </div>
       <div className={styles.container}>
-        <div className={styles.header}>SEARCHING RESULTS</div>
+        <div className={styles.header}>{t('Searching Results')}</div>
         <section className={styles.cardsContainer}>
           {filteredCars.map((car) => (
               <CarCard key={car.id} car={car} cardType="listCard" />

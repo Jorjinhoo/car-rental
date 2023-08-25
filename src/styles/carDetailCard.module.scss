@@ -67,3 +67,80 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .container {
+    .imgContainer {
+      .carIMG {
+        height: 280px;
+      }
+
+      .carName {
+        @include font(25px, 500, #161616);
+      }
+    }
+  
+    .detailsContainer {
+      .details {
+        margin: 25px 30px 0 0;
+    
+        .detailsTitle {
+          @include font(17px, 500, #161616);
+        }
+    
+        .item {
+          @include font(13px, 500, #2c2c2c);
+          width: 280px;
+
+          div {
+            @include font(12px, 500, #666666);
+          }
+        }
+  
+        .itemPrice {
+          @include font(17px, 500, #000000);
+  
+          div {
+            padding: 8px;
+          }
+  
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  
+    .detailsContainer {
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .detailsTitle {
+          @include font(20px, 500, #161616);
+        }
+    
+        .item {
+          @include font(15px, 500, #2c2c2c);
+          width: 350px;
+  
+          div {
+            @include font(15px, 500, #666666);
+          }
+        }
+  
+        .itemPrice {
+          @include font(19px, 500, #000000);
+  
+          div {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

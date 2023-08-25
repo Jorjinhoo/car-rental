@@ -5,6 +5,9 @@
   "Log in": "Log in",
   "Log out": "Log out",
 
+  "Rent a car easily": "Rent a car easily",
+  "Try It!": "Try It!",
+
   "Engine: ": "Engine: ",
   "Transmission ": "Transmission: ",
   "Seats: ": "Seats: ",
@@ -21,5 +24,52 @@
   "Car Types": "Car Types",
   "Contacts": "Contacts",
   "Documents": "Documents",
-  "Help": "Help"
+  "Help": "Help",
+
+  "Our offer": "Our offer",
+
+  "Reservation": "Reservation",
+
+  "Searching Results": "Searching Results",
+
+  "Sing in with Google": "Sing in with Google",
+  "Signup": "Signup",
+
+  "Or": "Or",
+  "From: ": "From",
+  "To: ": "To",
+  "Payment: ": "Payment",
+  "Total": "Total",
+  "Place: ": "Place: ",
+  "Order": "Order",
+  "Search": "Search",
+
+  "Last Order": "Last Order",
+  "No orders yet": "No orders yet",
+
+  "Specifications": "Specifications",
+  "Rental details": "Rental details",
+
+  "Available from: ": "Available from: ",
+  "Available to: ": "Available to: ",
+
+  "Added driver's license": "Added driver's license",
+  "Uploaded file: ": "Uploaded file: ",
+  "Upload your driver licence": "Upload your driver licence",
+  "select or drag a file": "select or drag a file",
+
+  "Pickup date": "Pickup date",
+  "Return date": "Return date",
+  "Pick-up place": "Pick-up place",
+  "Pick-up payment method": "Pick-up payment method",
+
+  "This field is required": "This field is required",
+
+  "Name": "Name",
+  "Surname": "Surname",
+
+  "My driving experience exceeds 2 years": "My driving experience exceeds 2 years",
+
+  "Contact Number": "Contact Number"
+
 }

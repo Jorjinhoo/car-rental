@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState, useEffect} from 'react';
 import { GoogleMap, Marker, LoadScript, InfoWindow } from '@react-google-maps/api';
 
 import styles from "../../styles/googleMap.module.scss";
@@ -8,6 +8,8 @@ import styles from "../../styles/googleMap.module.scss";
 const GoogleMapComponent = () => {
 
   const [infoWindow, setInfoWindow] = useState<number | null>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [zoom, setZoom] = useState<number>(6.2);
 
   const markers = [
     { lat: 52.19912371785977, lng: 21.0388183593756, description: "City, Random Street 1, 01-54" },
@@ -31,11 +33,28 @@ const GoogleMapComponent = () => {
     setInfoWindow(null);
   };
 
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    switch (true) {
+      case windowWidth < 500:
+        setZoom(5.2);
+        break;
+      default:
+        setZoom(6.2);
+    }
+  }, [windowWidth]); 
+
   return (
     <LoadScript googleMapsApiKey={`${process.env.REACT_APP_MAP_API_KEY}`}>
       <GoogleMap mapContainerClassName={styles.container} 
                  center={center} 
-                 zoom={6.2}
+                 zoom={zoom}
                  onClick={handleMapClick}
                  >
         {markers.map((marker, index) => (

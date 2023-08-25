@@ -1,6 +1,7 @@
 import { signInWithPopup } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 import { googleAuthProvider, auth } from "../authentication/firebase";
 import { setUser } from '../store/slices/userSlice';
@@ -12,6 +13,8 @@ import styles from "../styles/login.module.scss";
 
 
 const Login = () => {
+
+  const { t } = useTranslation();
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -33,9 +36,9 @@ const Login = () => {
     <div className={styles.container}>
       <div className={styles.menuBackground}></div>
       <div className={styles.loginGroup}>
-        <div className={styles.loginBTN} onClick={login}><FcGoogle className={styles.gogIcon} />Sing in with Google</div>
-        OR
-        <div className={styles.signupBTN}>Signup</div>
+        <div className={styles.loginBTN} onClick={login}><FcGoogle className={styles.gogIcon} />{t('Sing in with Google')}</div>
+        {t('Or')}
+        <div className={styles.signupBTN}>{t('Signup')}</div>
       </div>
     </div>
   )

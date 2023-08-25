@@ -5,6 +5,9 @@
   "Log in": "Zaloguj się",
   "Log out": "Wyloguj się",
 
+  "Rent a car easily": "Wynajmij samochód z łatwością",
+  "Try It!": "Wypróbuj!",
+
   "Engine: ": "Typ Silnika: ",
   "Transmission: ": "Skrzynia biegów: ",
   "Seats: ": "Liczba miejsc: ",
@@ -21,5 +24,51 @@
   "Car Types": "Typy pojazdów",
   "Contacts": "Kontakt",
   "Documents": "Dokumenty",
-  "Help": "Pomoc"
+  "Help": "Pomoc",
+
+  "Our offer": "Nasza oferta",
+
+  "Reservation": "Rezerwacja",
+
+  "Searching Results": "Wyniki wyszukiwania",
+
+  "Sing in with Google": "Zaloguj się za pomocą Google",
+  "Signup": "Zarejestruj się",
+
+  "Or": "Lub",
+  "From: ": "Od:",
+  "To: ": "Do:",
+  "Payment: ": "Płatność:",
+  "Total": "Razem",
+  "Place: ": "Miejscowość: ",
+  "Order": "Zamawiam",
+  "Search": "Szukaj",
+
+  "Last Order": "Ostatnie zamówienie",
+  "No orders yet": "Nie masz zamówień",
+
+  "Specifications": "Specyfikacje",
+  "Rental details": "Szczegóły wynajmu",
+
+  "Available from: ": "Dostępność od: ",
+  "Available to: ": "Dostępność do: ",
+
+  "Added driver's license": "Dodane prawo jazdy",
+  "Uploaded file: ": "Przesłany plik: ",
+  "Upload your driver licence": "Prześlij swoje prawo jazdy",
+  "select or drag a file": "wybierz lub przeciągnij plik",
+
+  "Pickup date": "Data odbioru",
+  "Return date": "Data zwrotu",
+  "Pick-up place": "Miejsce odbioru",
+  "Pick-up payment method": "Wybierz sposób płatności",
+
+  "This field is required": "Pole jest wymagane",
+
+  "Name": "Imię",
+  "Surname": "Nazwisko",
+
+  "My driving experience exceeds 2 years": "Moje doświadczenie za kierownicą przekracza 2 lata",
+
+  "Contact Number": "Numer kontaktowy"
 }

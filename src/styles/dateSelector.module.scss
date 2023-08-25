@@ -33,3 +33,75 @@
   }
   
 }
+
+
+@media screen and (max-width: 1400px) {
+  .container {
+
+    .label {
+      @include font(11px, 400, #6e6e6e);
+      margin: 6px 8px;
+    }
+  
+    .calendarIcon {
+      margin: 25px 20px;
+      font-size: 18px;
+      
+    }
+  
+    .dateInput {
+      @include font(13px, 400, #5c5858);
+      padding-top: 12px;
+      padding-left: 20px;
+      height: 55px;
+      width: 130px;
+      margin: 0 5px;
+    }
+    
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+
+    .label {
+      @include font(11px, 400, #6e6e6e);
+      margin: 15px 155px;
+      z-index: 1;
+    }
+  
+    .calendarIcon {
+      margin: 25px 30px;
+      font-size: 22px;
+      z-index: 1;
+      
+    }
+  
+    .dateInput {
+      @include font(13px, 400, #5c5858);
+      padding-top: 12px;
+      padding-left: 20px;
+      height: 55px;
+      width: 350px;
+      margin: 8px 5px 0 5px;
+    }
+    
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+
+    .label {
+      @include font(10px, 400, #6e6e6e);
+      margin: 15px 110px;
+    }
+  
+    .dateInput {
+      width: 250px;
+    }
+    
+  }
+}
+
+

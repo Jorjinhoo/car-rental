@@ -40,3 +40,67 @@
     }
   }
 }
+
+
+@media screen and (max-width: 1400px) {
+  .form {
+    margin-top: 35px;
+    padding: 8px;
+  
+    .error {
+      @include font(12px, 400, #fff);
+      margin-top: 100px;
+      padding: 4px;
+    }
+  
+    .selectDate {
+  
+      .error {
+        margin-top: 60px;
+      }
+    }
+  
+    .submit {
+      @include font(15px, 400, #fff);
+      height: 55px;
+      width: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .form {
+    flex-direction: column;
+    margin-top: 30px;
+  
+    .error {
+      @include font(12px, 400, #fff);
+      margin-top: 40px;
+      padding: 4px;
+    }
+  
+    .selectDate {
+  
+      .error {
+        margin-top: 50px;
+      }
+    }
+  
+    .submit {
+      @include font(15px, 400, #fff);
+      margin-top: 8px;
+      height: 55px;
+      width: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .form {
+
+    .submit {
+      width: 250px;
+    }
+  }
+}

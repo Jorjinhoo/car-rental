@@ -13,7 +13,7 @@ interface IProps {
 const RadioInput: FC<IProps> = ({ control, name, value, label }) => {
   return (
     <div className={styles.container}>
-      <label>
+      <label className={styles.label}>
         <Controller
           name={name}
           control={control}

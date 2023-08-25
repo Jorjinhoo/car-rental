@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from 'react-i18next';
 
 import { setOrderData } from "../../../store/slices/orderFormSlice";
 import { RootState } from "../../../store";
@@ -29,6 +30,8 @@ interface IProps {
 }
 
 const OrderForm: FC<IProps> = ({id}) => {
+
+  const { t } = useTranslation();
 
   const carsData = useSelector((state: RootState) => state.cars.cars);
   const { control, handleSubmit, formState: { errors } } = useForm<IData>();
@@ -65,11 +68,11 @@ const OrderForm: FC<IProps> = ({id}) => {
                         firstSelectedDate={firstSelectedDate} 
                         secondSelectedDate={secondSelectedDate} 
                         setSelectedDate={setFirstSelectedDate}
-                        labelName={"Pickup date"}
+                        labelName={t('Pickup date')}
                         minDate={selectedCar.availability.from}
                         maxDate={selectedCar.availability.to}
                         />
-          {errors.pickupDate && <span className={styles.error}>This field is required</span>}
+          {errors.pickupDate && <span className={styles.error}>{t('This field is required')}</span>}
         </div>
         <div className={styles.selectDate}>
           <DateSelector control={control} 
@@ -77,26 +80,26 @@ const OrderForm: FC<IProps> = ({id}) => {
                         firstSelectedDate={firstSelectedDate} 
                         secondSelectedDate={secondSelectedDate} 
                         setSelectedDate={setSecondSelectedDate}
-                        labelName={"Return date"}
+                        labelName={t('Return date')}
                         minDate={selectedCar.availability.from}
                         maxDate={selectedCar.availability.to}
                         />
-          {errors.returnDate && <span className={styles.error}>This field is required</span>}
+          {errors.returnDate && <span className={styles.error}>{t('This field is required')}</span>}
         </div>
       </div>
       {
         !isAuthenticated &&
           <div className={styles2.inputs}>
-            <div className={styles2.input}><Input control={control} name="Name" placeholder="Name" maxLenght={60} /></div>
-            <div className={styles2.input}><Input control={control} name="Surname" placeholder="Surname" maxLenght={60} /></div>
-            <div className={styles2.radioInput}><RadioInput control={control} name="drivingExperience" value="Yes" label="My driving experience exceeds 2 years" /></div>
-            <div className={styles2.input}><Input control={control} name="TelNumber" placeholder="Contact Number" minLength={9} maxLenght={11} pattern='[0-9]+' /></div>
+            <div className={styles2.input}><Input control={control} name="Name" placeholder={t('Name')} maxLenght={60} /></div>
+            <div className={styles2.input}><Input control={control} name="Surname" placeholder={t('Surname')} maxLenght={60} /></div>
+            <div className={styles2.radioInput}><RadioInput control={control} name="drivingExperience" value="Yes" label={t('My driving experience exceeds 2 years')} /></div>
+            <div className={styles2.input}><Input control={control} name="TelNumber" placeholder={t('Contact Number')} minLength={9} maxLenght={11} pattern='[0-9]+' /></div>
           </div>
       }
       <div className={styles2.paymentSelector}>
-        <PaymentSelector control={control} />
+        <PaymentSelector control={control} placeholder={t('Pick-up payment method')} />
       </div>
-      <input className={styles2.submit} value="Order" type="submit" disabled={Object.keys(errors).length > 0} />
+      <input className={styles2.submit} value={t('Order')} type="submit" disabled={Object.keys(errors).length > 0} />
     </form>
   )
 }

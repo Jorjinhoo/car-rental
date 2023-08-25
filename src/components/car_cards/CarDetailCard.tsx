@@ -30,7 +30,7 @@ const CarDetailCard: FC<IProps> = ({id}) => {
       </div>
       <div className={styles.detailsContainer}>
         <div className={styles.details}>
-          <div className={styles.detailsTitle}>Specifications</div>
+          <div className={styles.detailsTitle}>{t('Specifications')}</div>
           <div className={styles.item}><div>{t('Seats: ')}</div>{selectedCar.numberOfSeats}</div>
           <div className={styles.item}><div>{t('Fuel Consumption: ')}</div>{selectedCar.burning}</div>
           <div className={styles.item}><div>{t('Power: ')}</div>{selectedCar.enginePower}</div>
@@ -38,10 +38,10 @@ const CarDetailCard: FC<IProps> = ({id}) => {
           <div className={styles.item}><div>{t('Transmission: ')}</div>{selectedCar.transmission}</div>
         </div>
         <div className={styles.details}>
-          <div className={styles.detailsTitle}>Rental details</div>
-          <div className={styles.item}><div>{t('available from: ')}</div>{selectedCar.availability.from}</div>
-          <div className={styles.item}><div>{t('available to: ')}</div>{selectedCar.availability.to}</div>
-          <div className={styles.item}><div>{t('place: ')}</div>{selectedCar.place}</div>
+          <div className={styles.detailsTitle}>{t('Rental details')}</div>
+          <div className={styles.item}><div>{t('Available from: ')}</div>{selectedCar.availability.from}</div>
+          <div className={styles.item}><div>{t('Available to: ')}</div>{selectedCar.availability.to}</div>
+          <div className={styles.item}><div>{t('Place: ')}</div>{selectedCar.place}</div>
           <div className={styles.itemPrice}>{t('Price: ')}<div>{price}</div></div>
         </div>
       </div>

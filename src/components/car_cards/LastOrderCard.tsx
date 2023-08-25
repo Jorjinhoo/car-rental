@@ -1,11 +1,16 @@
 
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { RootState } from '../../store/index';
 
 import styles from "../../styles/lastOrderCard.module.scss";
 
+
+
 const LastOrderCard = () => {
+
+  const { t } = useTranslation();
 
   const lastOrder = useSelector((state: RootState) => state.orderFormData);
   const carsData = useSelector((state: RootState) => state.cars.cars);
@@ -13,8 +18,8 @@ const LastOrderCard = () => {
   
   const selectedCar = carsData.find(car => car.id === lastOrder.carID);
   if (!selectedCar) return <div className={`${styles.card} ${styles.card2}`}>
-                              <div className={styles.title}>Last Order</div>
-                              <div>No orders yet</div>
+                              <div className={styles.title}>{t('Last Order')}</div>
+                              <div>{t('No orders yet')}</div>
                             </div>;
 
 
@@ -38,15 +43,15 @@ const LastOrderCard = () => {
  
   return (
     <div className={styles.card}>
-      <div className={styles.title}>Last Order</div>
+      <div className={styles.title}>{t('Last Order')}</div>
       <img className={styles.carIMG} src={selectedCar?.image} alt=''/>
       <div className={styles.carName}>{selectedCar?.name}</div>
       <div className={styles.orderData}>
-        <div className={styles.item}><div>From:</div>{lastOrder.pickupDate}</div>
-        <div className={styles.item}><div>To:</div>{lastOrder.returnDate}</div>
-        <div className={styles.item}><div>Payment:</div>{lastOrder.paymentMethod}</div>
+        <div className={styles.item}><div>{t('From: ')}</div>{lastOrder.pickupDate}</div>
+        <div className={styles.item}><div>{t('To: ')}</div>{lastOrder.returnDate}</div>
+        <div className={styles.item}><div>{t('Payment: ')}</div>{lastOrder.paymentMethod}</div>
       </div>
-      <div className={styles.totalPrice}><div>Total </div>{totalPrice} {selectedCurrency === "USD" ? "USD" : "PLN"}</div>
+      <div className={styles.totalPrice}><div>{t('Total')} </div>{totalPrice} {selectedCurrency === "USD" ? "USD" : "PLN"}</div>
     </div>
   );
 };
