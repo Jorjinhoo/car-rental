@@ -75,3 +75,141 @@
     }
   }
 }
+
+@media screen and (max-width: 1600px) {
+  
+  .container {
+    .title {
+      @include titleWithLines($fontSize: 30px);
+    }
+  
+    .section {
+      @include font(14px, 500, #464646);
+      line-height: 2.7;
+      margin-left: 30px;
+  
+      .textTitle {
+        @include font(17px, 500, #000000);
+      }
+  
+      .infoList {
+        margin: 30px 0;
+        line-height: 2.3;
+  
+        li {
+      
+          &:first-child {
+            @include font(18px, 400, #000000);
+  
+          }
+        }
+  
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  
+  .container {
+    .title {
+      @include titleWithLines($fontSize: 25px, $lineWidth: 50%);
+    }
+  
+    .section {
+      @include font(12px, 500, #464646);
+      line-height: 2.7;
+      margin-left: 30px;
+  
+      .textTitle {
+        @include font(15px, 500, #000000);
+      }
+  
+      .infoList {
+        margin: 30px 0;
+        line-height: 2.3;
+  
+        li {
+      
+          &:first-child {
+            @include font(15px, 400, #000000);
+  
+          }
+        }
+  
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 660px) {
+  
+  .container {
+    .title {
+      @include titleWithLines($fontSize: 20px, $lineWidth: 40%);
+    }
+
+    .contactSection {
+
+      ul {
+        margin-bottom: 25px;
+        
+        li {
+          margin-right: 20px;
+          flex-direction: column;
+          align-items: center;
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+  .container {
+    .title {
+      @include titleWithLines($fontSize: 18px, $lineWidth: 40%);
+    }
+
+    .section {
+      @include font(12px, 500, #464646);
+      line-height: 2.7;
+      margin-left: 30px;
+  
+      .textTitle {
+        @include font(15px, 500, #000000);
+      }
+  
+      .infoList {
+        margin: 20px 0;
+        line-height: 2.3;
+  
+        li {
+      
+          &:first-child {
+            @include font(15px, 400, #000000);
+  
+          }
+        }
+  
+      }
+    }
+
+    .contactSection {
+      ul {
+        margin-bottom: 25px;
+        flex-direction: column;
+        
+        li {
+          margin-right: 20px;
+          flex-direction: row;
+          align-items: center;
+
+        }
+      }
+    }
+  }
+}

@@ -67,3 +67,35 @@
   }
 
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    height: 820px;
+
+    .menuBackground {
+      height: 60px;
+
+    }
+  
+    .loginGroup {
+      flex-direction: column;
+      align-items: center;
+  
+      .loginBTN {
+        margin: 0 0 20px 0;
+    
+      }
+  
+      .signupBTN {
+        margin: 20px 0 0 0;
+        
+  
+        &:hover::after {
+          bottom: 340px;
+          left: 50%;
+        }
+    
+      }
+    }
+  }
+}

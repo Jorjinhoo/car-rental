@@ -5,14 +5,7 @@
   margin: 0 auto;
 
   .firstSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    max-width: 1920px;
-    margin: 0 auto;
-    background-image: url('../../public/imgs/first-frame-car.jpg');
-    background-size: cover;
+    @include formSection;
   }
 
   .secondSection {
@@ -57,6 +50,100 @@
     }
     .lasOrdContainer {
       margin: 50px 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .container {
+    .secondSection {
+      .firstContainer {
+        margin: 40px 40px 0 0;
+  
+        .accDataContainer {
+          width: 400px;
+          height: 180px;
+          margin-bottom: 40px;
+          padding: 30px;
+          border-radius: 5px;
+      
+          .accLogo {
+            font-size: 90px;
+            margin-right: 20px
+          }
+      
+          .accData {
+            @include font(20px, 600, #1a1a1a);
+          }
+        }
+  
+        .someInfContainer {
+          @include font(20px, 600, #1a1a1a);
+          width: 400px;
+          height: 250px;
+          border-radius: 5px;
+        }
+      }
+      .lasOrdContainer {
+        margin: 40px 0;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .container {
+    .secondSection {
+      flex-direction: column;
+      align-items: center;
+
+      .firstContainer {
+        margin: 40px 0 0 0;
+  
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .container {
+    .secondSection {
+      .firstContainer {
+        margin: 20px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        .accDataContainer {
+          width: 270px;
+          height: 140px;
+          margin-bottom: 20px;
+          padding: 20px;
+      
+          .accLogo {
+            font-size: 40px;
+            margin-right: 10px
+          }
+      
+          .accData {
+            @include font(15px, 600, #1a1a1a);
+          }
+        }
+  
+        .someInfContainer {
+          @include font(15px, 600, #1a1a1a);
+          width: 270px;
+          height: 140px;
+          
+        }
+      }
+      .lasOrdContainer {
+        margin: 20px 0;
+      }
     }
   }
 }

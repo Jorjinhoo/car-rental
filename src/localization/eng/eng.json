@@ -70,6 +70,31 @@
 
   "My driving experience exceeds 2 years": "My driving experience exceeds 2 years",
 
-  "Contact Number": "Contact Number"
+  "Contact Number": "Contact Number",
+
+  "aboutUs.title": "About Us",
+  "aboutUs": {
+    "descriptionPart1": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "descriptionPart2": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.",
+    "descriptionPart3": "Many desktop publishing packages and web page",
+    "descriptionPart4": "editors now use Lorem",
+    "descriptionPart5": "Ipsum as their default model text, and a search for 'lorem ipsum'.",
+    "descriptionPart6": "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "descriptionPart7": "There are many",
+    "descriptionPart8": "variations of passages",
+    "descriptionPart9": "of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
+    "descriptionPart10": "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the",
+    "descriptionPart11": "middle of text."
+  },
+  "aboutUs.listItem1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit:",
+  "aboutUs.listItem2": "Ut dapibus erat a augue pellentesque, in volutpat lorem imperdiet.",
+  "aboutUs.listItem3": "Vivamus fringilla diam egestas tellus pretium, vel commodo ipsum lobortis.",
+  "aboutUs.listItem4": "Pellentesque at felis ut enim lobortis vehicula.",
+  "aboutUs.listItem5": "Etiam cursus mauris vel lorem mattis, id ornare ex venenatis.",
+  "aboutUs.ourLocation": "Our location",
+  "aboutUs.contactUs": "Contact Us",
+  "aboutUs.tel": "Tel:",
+  "aboutUs.email": "Email:",
+  "aboutUs.support": "Support:"
 
 }

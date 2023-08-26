@@ -47,7 +47,6 @@
 
 @media screen and (max-width: 900px) {
   .firstSection {
-
     .container {
       @include formSection($height: 750px, $borderBottom: none);
   
@@ -57,6 +56,22 @@
   
       .title2 {
         @include font(28px, 400, #fff);
+      }
+    }
+    
+  }
+}
+
+
+@media screen and (max-width: 380px) {
+  .firstSection {
+    .container {
+      .title {
+        @include font(33px, 400, #ffffff);
+      }
+  
+      .title2 {
+        @include font(24px, 400, #fff);
       }
     }
     

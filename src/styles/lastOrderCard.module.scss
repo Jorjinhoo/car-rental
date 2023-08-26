@@ -57,3 +57,68 @@
 .card2 {
   justify-content: center;
 }
+
+
+@media screen and (max-width: 1200px) {
+  .card {
+    height: 470px;
+    width: 320px;
+    border-radius: 5px;
+  
+    .title {
+      @include font(18px, 500, #000000);
+    }
+  
+    .carIMG {
+      border-radius: 10px;
+      height: 130px;
+      margin: 10px 0 5px 0;
+    }
+  
+    .carName {
+      @include font(19px, 500, #000000);
+    }
+  
+    .orderData {
+      margin-top: 20px;
+  
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    height: 400px;
+    width: 270px;
+  
+    .title {
+      @include font(15px, 500, #000000);
+    }
+  
+    .carIMG {
+      border-radius: 5px;
+      height: 110px;
+      margin: 5px 0 5px 0;
+    }
+  
+    .carName {
+      @include font(15px, 500, #000000);
+    }
+  
+    .orderData {
+      @include font(13px, 500, #000000);
+      margin-top: 10px;
+  
+      .item {
+        width: 240px;
+
+      }
+    }
+  
+    .totalPrice {
+      @include font(17px, 500, orange);
+      margin-top: 45px;
+  
+    }
+  }
+}

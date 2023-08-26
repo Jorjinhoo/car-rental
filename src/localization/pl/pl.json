@@ -70,5 +70,30 @@
 
   "My driving experience exceeds 2 years": "Moje doświadczenie za kierownicą przekracza 2 lata",
 
-  "Contact Number": "Numer kontaktowy"
+  "Contact Number": "Numer kontaktowy",
+
+  "aboutUs.title": "O nas",
+  "aboutUs": {
+    "descriptionPart1": "Od dawna wiadomo, że czytelnik zostanie rozproszony czytając czytelne treści na stronie, patrząc na jej układ.",
+    "descriptionPart2": "Celem korzystania z Lorem Ipsum jest to, że ma ono bardziej lub mniej normalny rozkład liter, w przeciwieństwie do korzystania z niego.",
+    "descriptionPart3": "Wiele pakietów do publikowania na pulpicie i edytorów stron internetowych",
+    "descriptionPart4": "obecnie używa Lorem",
+    "descriptionPart5": "Ipsum jako domyślny tekst modelu, a wyszukiwanie 'lorem ipsum'.",
+    "descriptionPart6": "Różne wersje ewoluowały przez lata, czasem przez przypadek, czasem celowo (wstrzyknięty humor i podobne).",
+    "descriptionPart7": "Jest wiele",
+    "descriptionPart8": "wariantów fragmentów",
+    "descriptionPart9": "Lorem Ipsum jest dostępnych, ale większość uległa zmianom w pewnej formie, wstrzykniętemu humorowi lub losowym słowom.",
+    "descriptionPart10": "Jeśli zamierzasz użyć fragmentu Lorem Ipsum, musisz upewnić się, że nie ma w nim niczego wstydliwego ukrytego w",
+    "descriptionPart11": "środku tekstu."
+  },
+  "aboutUs.listItem1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit:",
+  "aboutUs.listItem2": "Ut dapibus erat a augue pellentesque, in volutpat lorem imperdiet.",
+  "aboutUs.listItem3": "Vivamus fringilla diam egestas tellus pretium, vel commodo ipsum lobortis.",
+  "aboutUs.listItem4": "Pellentesque at felis ut enim lobortis vehicula.",
+  "aboutUs.listItem5": "Etiam cursus mauris vel lorem mattis, id ornare ex venenatis.",
+  "aboutUs.ourLocation": "Nasza lokalizacja",
+  "aboutUs.contactUs": "Skontaktuj się z nami",
+  "aboutUs.tel": "Tel:",
+  "aboutUs.email": "E-mail:",
+  "aboutUs.support": "Wsparcie:"
 }

@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 
 import LanguageOrCurrencyMenu from "./CurrencyLanguageMenu";
-import useAuth from '../../hooks/use-auth';
 import { clearUser } from '../../store/slices/userSlice';
 
 import styles from "../../styles/desctopNav.module.scss"
@@ -12,11 +11,12 @@ import styles from "../../styles/desctopNav.module.scss"
 interface IDesctopNavProps {
   Scrolled: boolean;
   path: string;
+  isAuth: boolean;
 }
 
 
-const DesctopNav: FC<IDesctopNavProps> = ({Scrolled, path}) => {
-  const { isAuthenticated } = useAuth();
+const DesctopNav: FC<IDesctopNavProps> = ({Scrolled, path, isAuth}) => {
+  
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -35,7 +35,7 @@ const DesctopNav: FC<IDesctopNavProps> = ({Scrolled, path}) => {
         <LanguageOrCurrencyMenu menuType="Lan" />
         <LanguageOrCurrencyMenu menuType="Cur" />
         { 
-          isAuthenticated ?
+          isAuth ?
             <Link to="/" onClick={handleLogout} className={`${styles.item} ${styles.logout}`}>{t('Log out')}</Link>
             :
             <Link to="/Login" className={`${styles.item} ${styles.login}`}>{t('Log in')}</Link>

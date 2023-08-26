@@ -39,8 +39,11 @@ const Header: FC = () => {
       <div className={styles.container}>
 
         <Link to={path} className={styles.logo}>FreeR</Link>
-        {windowWidth <= 850 ? <MobileNav path={path} /> : <DesctopNav Scrolled={scrolled} path={path} />}
-
+        {windowWidth <= 850 ? 
+          <MobileNav isAuth={isAuthenticated} Scrolled={ scrolled } /> 
+          : 
+          <DesctopNav Scrolled={ scrolled } path={ path } isAuth={ isAuthenticated } />
+          }
       </div>
     </div>
   );
