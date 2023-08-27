@@ -18,55 +18,58 @@
     }
   }
 
-  .menuIcon {
-    font-size: 30px;
-  }
-
-  .mobileMenu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50vw;
-    height: 100vh;
-    background-color: rgba(243, 243, 243, 0.952);
-    transform: translateX(200%);
-    z-index: 5;
-    transition: all .4s;
-
-    .closeIcon {
-      font-size: 40px;
-      margin: 20px 20px 0 auto;
-      color: #222222;
+  .menuu {
+    .menuIcon {
+      font-size: 30px;
     }
-
-    .menuItems {
-      margin: 40px 0 0 20%;
-
-      .item {
-        @include font(20px, 400, #222222);
-        margin-top: 20px;
-      }
-    }
-
-    .login {
-      @include font(20px, 400, #222222);
-      margin: 40px 0 0 20%;
-      display: flex;
-      align-items: center;
-
-      .logoutIcon {
-        margin-right: 8px;
-      }
-
-      .loginIcon {
-        margin-left: 8px;
+  
+    .mobileMenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50vw;
+      height: 100vh;
+      background-color: rgba(243, 243, 243, 0.952);
+      transform: translateX(200%);
+      z-index: 5;
+      transition: all .4s;
+  
+      .closeIcon {
         font-size: 40px;
+        margin: 20px 20px 0 auto;
+        color: #222222;
+      }
+  
+      .menuItems {
+        margin: 40px 0 0 20%;
+  
+        .item {
+          @include font(20px, 400, #222222);
+          margin-top: 20px;
+        }
+      }
+  
+      .login {
+        @include font(20px, 400, #222222);
+        margin: 40px 0 0 20%;
+        display: flex;
+        align-items: center;
+        width: 130px;
+  
+        .logoutIcon {
+          margin-right: 8px;
+        }
+  
+        .loginIcon {
+          margin-left: 8px;
+          font-size: 40px;
+        }
       }
     }
-  }
-
-  .mobileMenuActive {
-    transform: translateX(100%);
+  
+    .mobileMenuActive {
+      transform: translateX(100%);
+    }
   }
 }
 

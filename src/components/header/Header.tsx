@@ -38,7 +38,7 @@ const Header: FC = () => {
     <div className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
 
-        <Link to={path} className={styles.logo}>FreeR</Link>
+        <Link to={path} className={styles.logo}><p>FreeR</p></Link>
         {windowWidth <= 850 ? 
           <MobileNav isAuth={isAuthenticated} Scrolled={ scrolled } /> 
           : 

@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -25,6 +25,8 @@ const MobileNav: FC<IProps> = ({isAuth, Scrolled}) => {
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const mobileMenuRef = useRef<HTMLDivElement | null>(null);
+
   const handleMenuClick = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -34,7 +36,25 @@ const MobileNav: FC<IProps> = ({isAuth, Scrolled}) => {
     dispatch(clearUser());
   }
 
+  useEffect(() => {
 
+    const handleDocumentClick = (e: MouseEvent) => {
+      if (
+        isMobileMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(e.target as Node)
+      ) {
+        setMobileMenuOpen(false);
+      }
+    };
+    
+    document.addEventListener('click', handleDocumentClick);
+
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, [isMobileMenuOpen]);
+  
   return(
     <div className={`${styles.navBar} ${Scrolled ? styles.scrolled : ""}`}>
       <div className={styles.selectors}>
@@ -45,29 +65,31 @@ const MobileNav: FC<IProps> = ({isAuth, Scrolled}) => {
         <LanguageOrCurrencyMenu menuType="Cur" />
         </div>
       </div>
-      <AiOutlineMenu className={styles.menuIcon} onClick={handleMenuClick}/>
-      <div className={`${styles.mobileMenu} ${(isMobileMenuOpen) && (styles.mobileMenuActive)}`}>
-        <IoIosCloseCircleOutline onClick={handleMenuClick} className={styles.closeIcon} />
-        <ul className={styles.menuItems}>
-          <li className={styles.item}><Link to={isAuth ? "/authhome" : "/"} onClick={handleMenuClick}>{t('Home')}</Link></li>
-          <li className={styles.item}><Link to="/offer" onClick={handleMenuClick}>{t('Offer')}</Link></li>
-          <li className={styles.item}><Link to="/aboutus" onClick={handleMenuClick}>{t('About')}</Link></li>
-        </ul>
-        {isAuth ? 
-          (
-            <Link to="/" className={styles.login} onClick={handleLogout}>
-              <RxExit className={styles.logoutIcon} />
-              {t('Log out')}
-            </Link>
-          )
-          :
-          (
-            <Link to="/login" className={styles.login} onClick={handleMenuClick}>
-              {t('Log in')}
-              <CiLogin className={styles.loginIcon}/>
-            </Link>
-          )
-        }
+      <div className={styles.menuu} ref={mobileMenuRef}>
+        <AiOutlineMenu className={styles.menuIcon} onClick={handleMenuClick}/>
+        <div className={`${styles.mobileMenu} ${(isMobileMenuOpen) && (styles.mobileMenuActive)}`}>
+          <IoIosCloseCircleOutline onClick={handleMenuClick} className={styles.closeIcon} />
+          <ul className={styles.menuItems}>
+            <li className={styles.item}><Link to={isAuth ? "/authhome" : "/"} onClick={handleMenuClick}>{t('Home')}</Link></li>
+            <li className={styles.item}><Link to="/offer" onClick={handleMenuClick}>{t('Offer')}</Link></li>
+            <li className={styles.item}><Link to="/aboutus" onClick={handleMenuClick}>{t('About')}</Link></li>
+          </ul>
+          {isAuth ? 
+            (
+              <Link to="/" className={styles.login} onClick={handleLogout}>
+                <RxExit className={styles.logoutIcon} />
+                {t('Log out')}
+              </Link>
+            )
+            :
+            (
+              <Link to="/login" className={styles.login} onClick={handleMenuClick}>
+                {t('Log in')}
+                <CiLogin className={styles.loginIcon}/>
+              </Link>
+            )
+          }
+        </div>
       </div>
   </div>
   )

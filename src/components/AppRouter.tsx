@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import { privateRoutes, publicRoutes } from "../router/routes";
 import useAuth from '../hooks/use-auth';
@@ -8,22 +8,25 @@ const AppRouter = () => {
 
   const { isAuthenticated } = useAuth();
 
-  return isAuthenticated ? 
-    (
-      <Routes>
-        {privateRoutes.map(({path, Component}) =>
-        <Route key={path} path={path} Component={Component} />
-        )}
-      </Routes>
-    )
-    :
-    (
-      <Routes>
-        {publicRoutes.map(({path, Component}) =>
-        <Route key={path} path={path} Component={Component} />
-        )}
-      </Routes>
-    )
+  return (
+    <Routes>
+      {isAuthenticated ? (
+        <>
+          {privateRoutes.map(({ path, Component }) => (
+            <Route key={path} path={path} element={<Component />} />
+          ))}
+          <Route path="*" element={<Navigate to="/authhome" />} />
+        </>
+      ) : (
+        <>
+          {publicRoutes.map(({ path, Component }) => (
+            <Route key={path} path={path} element={<Component />} />
+          ))}
+          <Route path="*" element={<Navigate to="/" />} />
+        </>
+      )}
+    </Routes>
+  );
 }
 
 export default AppRouter;

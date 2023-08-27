@@ -65,13 +65,21 @@ const SelectedPeriod = () => {
     <>
       <div className={styles.rentForm}>
           <RentForm />
-        </div>
+      </div>
       <div className={styles.container}>
         <div className={styles.header}>{t('Searching Results')}</div>
         <section className={styles.cardsContainer}>
-          {filteredCars.map((car) => (
-              <CarCard key={car.id} car={car} cardType="listCard" />
-            ))}
+          { filteredCars.length >= 1 ?
+            (
+              filteredCars.map((car) => (
+                <CarCard key={car.id} car={car} cardType="listCard" />
+              ))
+            )
+            :
+            (
+              <div className={styles.notCars}>Nothing found...<div>Change the search options</div></div>
+            )
+          }
         </section>
       </div>
     </>

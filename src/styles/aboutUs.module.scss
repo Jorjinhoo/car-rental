@@ -1,19 +1,14 @@
 @import "./utils/mixins.scss";
 
 .headerBcgrnd {
+  @apply h-20 mx-auto;
   max-width: 1920px;
-  height: 80px;
   background-color: rgb(54, 139, 54);
-  margin: 0 auto;
+
 }
 
 .container {
-  max-width: 1920px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @apply max-w-screen-2xl mx-auto flex flex-col items-center justify-center;
 
   .title {
     @include titleWithLines;
@@ -202,6 +197,7 @@
       ul {
         margin-bottom: 25px;
         flex-direction: column;
+        align-items: center;
         
         li {
           margin-right: 20px;

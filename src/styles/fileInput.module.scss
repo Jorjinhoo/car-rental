@@ -1,171 +1,202 @@
 @import "./utils/mixins.scss";
 
-.inputContainer {
-  width: 530px;
-  height: 270px;
 
-  .label {
-    @include font(18px, 400, #2e2e2e);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    margin: auto;
-    height: 270px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .inputContainer {
     width: 530px;
-    border: dashed 2px rgb(46, 150, 46);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .3s;
-
-    .selectedFileName {
-      @include font(18px, 400, #525252);
+    height: 250px;
+  
+    .label {
+      @include font(18px, 400, #2e2e2e);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      margin: auto;
+      height: 250px;
+      width: 530px;
+      border: dashed 2px rgb(46, 150, 46);
+      border-radius: 10px;
+      cursor: pointer;
       transition: .3s;
-
-      .addedText {
-        @include font(20px, 400, #2c2c2c);
+  
+      .selectedFileName {
+        @include font(18px, 400, #525252);
+        transition: .3s;
+  
+        .addedText {
+          @include font(20px, 400, #2c2c2c);
+          transition: .3s;
+        }
+  
+      }
+  
+      .img {
+        font-size: 60px;
+        margin-bottom: 10px;
         transition: .3s;
       }
-    }
-
-    .img {
-      font-size: 60px;
-      margin-bottom: 10px;
-      transition: .3s;
-    }
-
-    .extraText {
-      @include font(16px, 400, #525252);
-      transition: .3s;
-    }
-
-    &:hover {
-      font-size: 20px;
-      background-color: rgb(181, 218, 181);
-      border: none;
-
-      .selectedFileName {
+  
+      .extraText {
+        @include font(16px, 400, #525252);
+        transition: .3s;
+      }
+  
+      &:hover {
         font-size: 20px;
-
-        .addedText {
-          font-size: 22px;
+        background-color: rgb(181, 218, 181);
+        border: none;
+  
+        .selectedFileName {
+          font-size: 20px;
+  
+          .addedText {
+            font-size: 22px;
+          }
+        }
+  
+        .img {
+          font-size: 65px;
+        }
+  
+        .extraText {
+          font-size: 18px;
         }
       }
-
-      .img {
-        font-size: 65px;
-      }
-
-      .extraText {
-        font-size: 18px;
-      }
+    }
+     
+    .input {
+      display: none;
     }
   }
-   
-  .input {
-    display: none;
+
+  .deleteBTN {
+    @include font(18px, 400, #fff);
+    padding: 5px;
+    margin: 10px auto;
+    background-color: orange;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+      opacity: .9;
+    }
   }
 }
 
 
 @media screen and (max-width: 1200px) {
-  .inputContainer {
-    width: 380px;
-    height: 230px;
-  
-    .label {
-      @include font(16px, 400, #2e2e2e);
-      height: 230px;
+  .container {
+    .inputContainer {
       width: 380px;
-      border-radius: 5px;
-  
-      .selectedFileName {
-        @include font(16px, 400, #525252);
-  
-        .addedText {
-          @include font(18px, 400, #2c2c2c);
-        }
-      }
-  
-      .img {
-        font-size: 50px;
-        margin-bottom: 10px;
-      }
-  
-      .extraText {
-        @include font(14px, 400, #525252);
-      }
-  
-      &:hover {
-        font-size: 19px;
-  
+      height: 180px;
+    
+      .label {
+        @include font(16px, 400, #2e2e2e);
+        height: 180px;
+        width: 380px;
+        border-radius: 5px;
+    
         .selectedFileName {
-          font-size: 18px;
-  
+          @include font(16px, 400, #525252);
+    
           .addedText {
-            font-size: 19px;
+            @include font(18px, 400, #2c2c2c);
           }
         }
-  
+    
         .img {
-          font-size: 55px;
+          font-size: 50px;
+          margin-bottom: 10px;
         }
-  
+    
         .extraText {
-          font-size: 16px;
+          @include font(14px, 400, #525252);
+        }
+    
+        &:hover {
+          font-size: 19px;
+    
+          .selectedFileName {
+            font-size: 18px;
+    
+            .addedText {
+              font-size: 19px;
+            }
+          }
+    
+          .img {
+            font-size: 55px;
+          }
+    
+          .extraText {
+            font-size: 16px;
+          }
         }
       }
+    }
+
+    .deleteBTN {
+      @include font(13px, 400, #fff);
+      padding: 5px;
+      margin: 5px auto;
     }
   }
 }
 
 
 @media screen and (max-width: 450px) {
-  .inputContainer {
-    width: 260px;
-    height: 125px;
-  
-    .label {
-      @include font(16px, 400, #2e2e2e);
-      height: 125px;
+  .container {
+    .inputContainer {
       width: 260px;
-      border: dashed 1px rgb(46, 150, 46);
-  
-      .selectedFileName {
-        @include font(13px, 400, #525252);
-  
-        .addedText {
-          @include font(14px, 400, #2c2c2c);
-        }
-      }
-  
-      .img {
-        font-size: 40px;
-        margin-bottom: 8px;
-      }
-  
-      .extraText {
-        @include font(14px, 400, #525252);
-      }
-  
-      &:hover {
-        font-size: 16px;
-  
+      height: 125px;
+    
+      .label {
+        @include font(16px, 400, #2e2e2e);
+        height: 125px;
+        width: 260px;
+        border: dashed 1px rgb(46, 150, 46);
+    
         .selectedFileName {
-          font-size: 15px;
-  
+          @include font(13px, 400, #525252);
+    
           .addedText {
-            font-size: 16px;
+            @include font(14px, 400, #2c2c2c);
           }
         }
-  
+    
         .img {
-          font-size: 45px;
+          font-size: 40px;
+          margin-bottom: 8px;
         }
-  
+    
         .extraText {
-          font-size: 14px;
+          @include font(14px, 400, #525252);
+        }
+    
+        &:hover {
+          font-size: 16px;
+    
+          .selectedFileName {
+            font-size: 15px;
+    
+            .addedText {
+              font-size: 16px;
+            }
+          }
+    
+          .img {
+            font-size: 45px;
+          }
+    
+          .extraText {
+            font-size: 14px;
+          }
         }
       }
     }

@@ -33,29 +33,40 @@ const FileInput = () => {
     }
   }, []);
 
+  const handleFileClear = () => {
+    localStorage.removeItem("selectedFileName");
+    setSelectedFileName("");
+    console.log(localStorage.getItem("selectedFileName"));
+  }
+
   return (
-    <div className={styles.inputContainer}>
-      <label className={styles.label} htmlFor="file">
-        {selectedFileName ? (
-          <div className={styles.selectedFileName}>
-            <div className={styles.addedText}>{t("Added driver's license")}</div>
-            {t('Uploaded file: ')}{selectedFileName}
-          </div>
-        ) : (
-          <>
-            <AiOutlineFileAdd className={styles.img} />
-            {t('Upload your driver licence')}
-            <div className={styles.extraText}>{t('select or drag a file')}</div>
-          </>
-        )}
-      </label>
-      <input
-        type="file"
-        accept=".jpg, .jpeg, .png, .pdf"
-        id="file"
-        className={styles.input}
-        onChange={handleFileChange}
-      />
+    <div className={styles.container}>
+      <div className={styles.inputContainer}>
+        <label className={styles.label} htmlFor="file">
+          {selectedFileName ? (
+            <div className={styles.selectedFileName}>
+              <div className={styles.addedText}>{t("Added driver's license")}</div>
+              {t('Uploaded file: ')}{selectedFileName}
+            </div>
+          ) : (
+            <>
+              <AiOutlineFileAdd className={styles.img} />
+              {t('Upload your driver licence')}
+              <div className={styles.extraText}>{t('select or drag a file')}</div>
+            </>
+          )}
+        </label>
+        <input
+          type="file"
+          accept=".jpg, .jpeg, .png, .pdf"
+          id="file"
+          className={styles.input}
+          onChange={handleFileChange}
+        />
+      </div>
+      {selectedFileName && 
+        <div className={styles.deleteBTN} onClick={handleFileClear}>{t('Delete')}</div>
+      }
     </div>
   );
 };

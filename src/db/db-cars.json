@@ -12,7 +12,7 @@
       "price": 130,
       "availability": {
         "from": "2023-08-22",
-        "to": "2023-08-29"
+        "to": "2023-10-29"
       },
       "place": "City, Random Street 2, 01-110"
     },
@@ -23,12 +23,12 @@
       "engineType": "Gasoline",
       "transmission": "Automatic",
       "numberOfSeats": 5,
-      "enginePower": "120 Hp",
-      "burning": "10 L",
-      "price": 130,
+      "enginePower": "220 Hp",
+      "burning": "12 L",
+      "price": 220,
       "availability": {
-        "from": "2023-08-27",
-        "to": "2023-08-29"
+        "from": "2023-09-20",
+        "to": "2028-08-29"
       },
       "place": "City, Random Street 1, 01-54"
     },
@@ -39,12 +39,12 @@
       "engineType": "Gasoline",
       "transmission": "Automatic",
       "numberOfSeats": 5,
-      "enginePower": "120 Hp",
-      "burning": "10 L",
-      "price": 130,
+      "enginePower": "160 Hp",
+      "burning": "9 L",
+      "price": 90,
       "availability": {
         "from": "2023-09-22",
-        "to": "2023-10-22"
+        "to": "2024-01-22"
       },
       "place": "City, Random Street 1, 01-54"
     },
@@ -55,14 +55,14 @@
       "engineType": "Gasoline",
       "transmission": "Automatic",
       "numberOfSeats": 5,
-      "enginePower": "120 Hp",
-      "burning": "10 L",
-      "price": 130,
+      "enginePower": "166 Hp",
+      "burning": "12 L",
+      "price": 186,
       "availability": {
         "from": "2023-08-22",
-        "to": "2023-09-22"
+        "to": "2023-12-22"
       },
-      "place": "City, Random Street 3, 03-53"
+      "place": "City, Random Street 5, 01-55"
     },
     {
       "id": 5,
@@ -70,13 +70,13 @@
       "name": "Audi Q3",
       "engineType": "Gasoline",
       "transmission": "Automatic",
-      "numberOfSeats": 5,
-      "enginePower": "120 Hp",
-      "burning": "10 L",
-      "price": 130,
+      "numberOfSeats": 4,
+      "enginePower": "400 Hp",
+      "burning": "15 L",
+      "price": 359.99,
       "availability": {
         "from": "2023-08-29",
-        "to": "2023-08-29"
+        "to": "2024-08-29"
       },
       "place": "City, Random Street 3, 03-53"
     },
@@ -86,36 +86,52 @@
       "name": "Toyota Proace",
       "engineType": "Gasoline",
       "transmission": "Automatic",
-      "numberOfSeats": 5,
-      "enginePower": "120 Hp",
-      "burning": "10 L",
-      "price": 130,
+      "numberOfSeats": 8,
+      "enginePower": "240 Hp",
+      "burning": "15 L",
+      "price": 199,
       "availability": {
         "from": "2023-08-22",
-        "to": "2023-08-28"
+        "to": "2023-11-28"
       },
       "place": "City, Random Street 4, 38"
     },
     {
       "id": 7,
-      "image": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fhips.hearstapps.com%2Fhmg-prod%2Fimages%2Fc-005-1500x1000-1652713137.jpg%3Fcrop%3D0.958xw%3A0.719xh%3B0.0358xw%2C0.130xh%26resize%3D1200%3A*&tbnid=8x-ttfrAvHMZGM&vet=12ahUKEwjD4cCyxOOAAxVh-IsKHaLSDwwQMygEegQIARBb..i&imgrefurl=https%3A%2F%2Fwww.caranddriver.com%2Ftoyota%2Fcamry-2023&docid=PRTS-AjuNWnTaM&w=1200&h=600&q=toyota%20camry&ved=2ahUKEwjD4cCyxOOAAxVh-IsKHaLSDwwQMygEegQIARBb",
+      "image": "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_low/v1/editorial/renault-trafic-my20-index-1.png",
       "name": "Renault Trafic",
       "engineType": "Gasoline",
       "transmission": "Automatic",
-      "numberOfSeats": 5,
-      "enginePower": "120 Hp",
-      "burning": "10 L",
-      "price": 130,
+      "numberOfSeats": 8,
+      "enginePower": "230 Hp",
+      "burning": "16 L",
+      "price": 250,
       "availability": {
         "from": "2023-08-22",
-        "to": "2023-08-27"
+        "to": "2025-08-27"
       },
       "place": "City, Random Street 4, 38"
     },
     {
       "id": 8,
-      "image": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fhips.hearstapps.com%2Fhmg-prod%2Fimages%2Fc-005-1500x1000-1652713137.jpg%3Fcrop%3D0.958xw%3A0.719xh%3B0.0358xw%2C0.130xh%26resize%3D1200%3A*&tbnid=8x-ttfrAvHMZGM&vet=12ahUKEwjD4cCyxOOAAxVh-IsKHaLSDwwQMygEegQIARBb..i&imgrefurl=https%3A%2F%2Fwww.caranddriver.com%2Ftoyota%2Fcamry-2023&docid=PRTS-AjuNWnTaM&w=1200&h=600&q=toyota%20camry&ved=2ahUKEwjD4cCyxOOAAxVh-IsKHaLSDwwQMygEegQIARBb",
+      "image": "https://www.automobiletorino-lublin.pl/content/dam/ddp-dws/it/master-italia/model_pages_2022/fiat_professional/ducato_merci/ducato_merci_modelpage_top.png",
       "name": "Fiat Ducato",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 12,
+      "enginePower": "200 Hp",
+      "burning": "18 L",
+      "price": 310,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2024-08-23"
+      },
+      "place": "City, Random Street 1, 01-54"
+    },
+    {
+      "id": 9,
+      "image": "https://www.kia.com/content/dam/kwcms/kme/global/en/assets/vehicles/kia-ceed-sportswagon-my22/discover/kia-ceed-gtl-my22-family.png",
+      "name": "Kia Ceed Comby",
       "engineType": "Gasoline",
       "transmission": "Automatic",
       "numberOfSeats": 5,
@@ -124,9 +140,313 @@
       "price": 130,
       "availability": {
         "from": "2023-08-22",
-        "to": "2023-08-23"
+        "to": "2025-08-29"
+      },
+      "place": "City, Random Street 2, 01-110"
+    },
+    {
+      "id": 10,
+      "image": "https://www.toyotahawaii.com/on/demandware.static/-/Sites-Servco_master/default/dw387d8ffe/images/model/Camry/360/cavalry-blue/23_Camry_XSE_CavalryBlue_1.png",
+      "name": "Toyota Camry",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "120 Hp",
+      "burning": "10 L",
+      "price": 130,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2023-08-29"
+      },
+      "place": "City, Random Street 2, 01-110"
+    },
+    {
+      "id": 11,
+      "image": "https://kong-proxy-aws.toyota-europe.com/c1-images/resize/ccis/680x680/zip/pl/product-token/891092c1-709d-4ece-b8d0-3dc23d6ce558/vehicle/3100a6b0-9e13-4071-af2b-6b3277db74e9/padding/50,50,50,50/image-quality/70/day-exterior-4_ewp.png",
+      "name": "Toyota Proace",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 8,
+      "enginePower": "240 Hp",
+      "burning": "15 L",
+      "price": 199,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2023-11-28"
+      },
+      "place": "City, Random Street 4, 38"
+    },
+    {
+      "id": 12,
+      "image": "https://www.vehicles.reachengagedevelop.com/images/vehicles/47060012.png",
+      "name": "Nissan Qashqai",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "166 Hp",
+      "burning": "12 L",
+      "price": 186,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2023-12-22"
+      },
+      "place": "City, Random Street 3, 03-53"
+    },
+    {
+      "id": 13,
+      "image": "https://kong-proxy-aws.toyota-europe.com/c1-images/resize/ccis/680x680/zip/pl/product-token/891092c1-709d-4ece-b8d0-3dc23d6ce558/vehicle/3100a6b0-9e13-4071-af2b-6b3277db74e9/padding/50,50,50,50/image-quality/70/day-exterior-4_ewp.png",
+      "name": "Toyota Proace",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 8,
+      "enginePower": "240 Hp",
+      "burning": "15 L",
+      "price": 199,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2023-11-28"
+      },
+      "place": "City, Random Street 4, 38"
+    },
+    {
+      "id": 14,
+      "image": "https://www.kia.com/content/dam/kwcms/kme/global/en/assets/vehicles/ceed-cd/discover/kia-ceed-cd-my19-family-ceed.png",
+      "name": "Kia Ceed",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "220 Hp",
+      "burning": "12 L",
+      "price": 220,
+      "availability": {
+        "from": "2023-09-20",
+        "to": "2028-08-29"
       },
       "place": "City, Random Street 1, 01-54"
+    },
+    {
+      "id": 15,
+      "image": "https://www.automobiletorino-lublin.pl/content/dam/ddp-dws/it/master-italia/model_pages_2022/fiat_professional/ducato_merci/ducato_merci_modelpage_top.png",
+      "name": "Fiat Ducato",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 12,
+      "enginePower": "200 Hp",
+      "burning": "18 L",
+      "price": 310,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2024-08-23"
+      },
+      "place": "City, Random Street 1, 01-54"
+    },
+    {
+      "id": 16,
+      "image": "https://avanta-avto-credit.ru/upload/resize_cache/iblock/9cf/600_600_140cd750bba9870f18aada2478b24840a/9cfb7fc27f9f28675ec88c6d406cc4b3.png",
+      "name": "Opel Astra",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "160 Hp",
+      "burning": "9 L",
+      "price": 90,
+      "availability": {
+        "from": "2023-09-22",
+        "to": "2024-01-22"
+      },
+      "place": "City, Random Street 1, 01-54"
+    },
+    {
+      "id": 17,
+      "image": "https://www.pngmart.com/files/22/Audi-Q3-Sportback-Download-PNG-Image.png",
+      "name": "Audi Q3",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 4,
+      "enginePower": "400 Hp",
+      "burning": "15 L",
+      "price": 359.99,
+      "availability": {
+        "from": "2023-08-29",
+        "to": "2024-08-29"
+      },
+      "place": "City, Random Street 3, 03-53"
+    },
+    {
+      "id": 18,
+      "image": "https://www.toyotahawaii.com/on/demandware.static/-/Sites-Servco_master/default/dw387d8ffe/images/model/Camry/360/cavalry-blue/23_Camry_XSE_CavalryBlue_1.png",
+      "name": "Toyota Camry",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "120 Hp",
+      "burning": "10 L",
+      "price": 130,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2023-08-29"
+      },
+      "place": "City, Random Street 2, 01-110"
+    },
+    {
+      "id": 19,
+      "image": "https://www.vehicles.reachengagedevelop.com/images/vehicles/47060012.png",
+      "name": "Nissan Qashqai",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "166 Hp",
+      "burning": "12 L",
+      "price": 186,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2023-12-22"
+      },
+      "place": "City, Random Street 3, 03-53"
+    },
+    {
+      "id": 20,
+      "image": "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_low/v1/editorial/renault-trafic-my20-index-1.png",
+      "name": "Renault Trafic",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 8,
+      "enginePower": "230 Hp",
+      "burning": "16 L",
+      "price": 250,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2025-08-27"
+      },
+      "place": "City, Random Street 4, 38"
+    },
+    {
+      "id": 21,
+      "image": "https://www.kia.com/content/dam/kwcms/kme/global/en/assets/vehicles/kia-ceed-sportswagon-my22/discover/kia-ceed-gtl-my22-family.png",
+      "name": "Kia Ceed Comby",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "120 Hp",
+      "burning": "10 L",
+      "price": 130,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2025-08-29"
+      },
+      "place": "City, Random Street 2, 01-110"
+    },
+    {
+      "id": 22,
+      "image": "https://kong-proxy-aws.toyota-europe.com/c1-images/resize/ccis/680x680/zip/pl/product-token/891092c1-709d-4ece-b8d0-3dc23d6ce558/vehicle/3100a6b0-9e13-4071-af2b-6b3277db74e9/padding/50,50,50,50/image-quality/70/day-exterior-4_ewp.png",
+      "name": "Toyota Proace",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 8,
+      "enginePower": "240 Hp",
+      "burning": "15 L",
+      "price": 199,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2023-11-28"
+      },
+      "place": "City, Random Street 4, 38"
+    },
+    {
+      "id": 23,
+      "image": "https://www.toyotahawaii.com/on/demandware.static/-/Sites-Servco_master/default/dw387d8ffe/images/model/Camry/360/cavalry-blue/23_Camry_XSE_CavalryBlue_1.png",
+      "name": "Toyota Camry",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "120 Hp",
+      "burning": "10 L",
+      "price": 130,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2023-10-29"
+      },
+      "place": "City, Random Street 2, 01-110"
+    },
+    {
+      "id": 24,
+      "image": "https://www.kia.com/content/dam/kwcms/kme/global/en/assets/vehicles/ceed-cd/discover/kia-ceed-cd-my19-family-ceed.png",
+      "name": "Kia Ceed",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "220 Hp",
+      "burning": "12 L",
+      "price": 220,
+      "availability": {
+        "from": "2023-09-20",
+        "to": "2028-08-29"
+      },
+      "place": "City, Random Street 1, 01-54"
+    },
+    {
+      "id": 25,
+      "image": "https://www.pngmart.com/files/22/Audi-Q3-Sportback-Download-PNG-Image.png",
+      "name": "Audi Q3",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 4,
+      "enginePower": "400 Hp",
+      "burning": "15 L",
+      "price": 359.99,
+      "availability": {
+        "from": "2023-08-29",
+        "to": "2024-08-29"
+      },
+      "place": "City, Random Street 3, 03-53"
+    },
+    {
+      "id": 26,
+      "image": "https://www.automobiletorino-lublin.pl/content/dam/ddp-dws/it/master-italia/model_pages_2022/fiat_professional/ducato_merci/ducato_merci_modelpage_top.png",
+      "name": "Fiat Ducato",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 12,
+      "enginePower": "200 Hp",
+      "burning": "18 L",
+      "price": 310,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2024-08-23"
+      },
+      "place": "City, Random Street 1, 01-54"
+    },
+    {
+      "id": 27,
+      "image": "https://avanta-avto-credit.ru/upload/resize_cache/iblock/9cf/600_600_140cd750bba9870f18aada2478b24840a/9cfb7fc27f9f28675ec88c6d406cc4b3.png",
+      "name": "Opel Astra",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "160 Hp",
+      "burning": "9 L",
+      "price": 90,
+      "availability": {
+        "from": "2023-09-22",
+        "to": "2024-01-22"
+      },
+      "place": "City, Random Street 1, 01-54"
+    },
+    {
+      "id": 28,
+      "image": "https://www.toyotahawaii.com/on/demandware.static/-/Sites-Servco_master/default/dw387d8ffe/images/model/Camry/360/cavalry-blue/23_Camry_XSE_CavalryBlue_1.png",
+      "name": "Toyota Camry",
+      "engineType": "Gasoline",
+      "transmission": "Automatic",
+      "numberOfSeats": 5,
+      "enginePower": "120 Hp",
+      "burning": "10 L",
+      "price": 130,
+      "availability": {
+        "from": "2023-08-22",
+        "to": "2023-10-29"
+      },
+      "place": "City, Random Street 2, 01-110"
     }
   ]
 }

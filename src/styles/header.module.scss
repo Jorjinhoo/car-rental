@@ -7,7 +7,7 @@
   width: 100%;
   z-index: 10;
   background-color: transparent;
-  transition: background-color 0.5s ease;
+  transition: background-color .5s ease;
 
   .container {
     display: flex;
@@ -36,8 +36,8 @@
     .logo {
       @include font(40px, 900, #fff);
       padding: 5px 25px;
-      margin: 10px 0;
       background-color: rgb(48, 184, 48);
+      transition: .5s, transform 0.5s ease;
     }
   }
 }
