@@ -7,7 +7,20 @@
   flex-direction: column;
   justify-content: center;
 
-  form {
+
+  .isSubscribed {
+    @include font(18px, 400, #3b3b3b);
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    max-width: 1920px;
+
+  }
+
+  .form {
     margin: 50px 0;
     padding: 40px 180px;
     display: flex;
@@ -130,6 +143,10 @@
 
 @media screen and (max-width: 800px) {
   .container {
+
+    .isSubscribed {
+      font-size: 14px;
+    }
   
     form {
       margin: 30px 0;
@@ -164,6 +181,10 @@
 
 @media screen and (max-width: 500px) {
   .container {
+
+    .isSubscribed {
+      font-size: 12px;
+    }
   
     form {
       margin: 40px 0;

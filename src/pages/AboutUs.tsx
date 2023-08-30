@@ -7,6 +7,7 @@ import styles from "../styles/aboutUs.module.scss";
 
 
 const AboutUs = () => {
+
   const { t } = useTranslation();
 
   return (

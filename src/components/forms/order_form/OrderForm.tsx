@@ -57,6 +57,8 @@ const OrderForm: FC<IProps> = ({id}) => {
 
     dispatch(setOrderData(formData));
     isAuthenticated ? navigate("/authhome") : navigate("/");
+
+    alert("Your order has been successful, please wait for confirmation");
   };
 
   return(
