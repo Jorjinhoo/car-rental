@@ -33,6 +33,7 @@ const MobileNav: FC<IProps> = ({isAuth, Scrolled}) => {
 
   const handleLogout = () => {
     handleMenuClick();
+    localStorage.removeItem('user');
     dispatch(clearUser());
   }
 

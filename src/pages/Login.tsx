@@ -24,6 +24,7 @@ const Login = () => {
       const userCredential = await signInWithPopup(auth, googleAuthProvider);
       const user = userCredential.user
       // console.log(user);
+      localStorage.setItem('user', JSON.stringify(user));
       dispatch(setUser(user));
       console.log(user);
       navigate('/authhome');

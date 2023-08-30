@@ -21,6 +21,7 @@ const DesctopNav: FC<IDesctopNavProps> = ({Scrolled, path, isAuth}) => {
   const { t } = useTranslation();
 
   const handleLogout = () => {
+    localStorage.removeItem('user');
     dispatch(clearUser());
   }
 
