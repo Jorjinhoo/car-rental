@@ -1,11 +1,14 @@
+import { lazy } from "react";
+
 import { ABOUT_US_ROUTE, AUTH_HOME_ROUTE, HOME_ROUTE, LOGIN_ROUTE, OFFER_ROUTE, RENT_CAR_ROUTE, SELECTED_PERIOD } from "./consts";
-import Login from "../pages/Login";
-import AuthHome from "../pages/AuthHome";
-import Home from "../pages/Home";
-import SelectedPeriod from "../pages/SelectedPeriod";
-import RentCar from "../pages/RentCar";
-import Offer from "../pages/Offer";
-import AboutUs from "../pages/AboutUs";
+
+const Login = lazy(() => import('../pages/Login'));
+const AuthHome = lazy(() => import('../pages/AuthHome'));
+const Home = lazy(() => import('../pages/Home'));
+const SelectedPeriod = lazy(() => import('../pages/SelectedPeriod'));
+const RentCar = lazy(() => import('../pages/RentCar'));
+const Offer = lazy(() => import('../pages/Offer'));
+const AboutUs = lazy(() => import('../pages/AboutUs'));
 
 interface IRoute {
   path: string;

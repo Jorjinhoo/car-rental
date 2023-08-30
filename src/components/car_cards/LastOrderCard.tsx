@@ -44,7 +44,7 @@ const LastOrderCard = () => {
   return (
     <div className={styles.card}>
       <div className={styles.title}>{t('Last Order')}</div>
-      <img className={styles.carIMG} src={selectedCar?.image} alt=''/>
+      <img className={styles.carIMG} src={selectedCar?.image} alt='' />
       <div className={styles.carName}>{selectedCar?.name}</div>
       <div className={styles.orderData}>
         <div className={styles.item}><div>{t('From: ')}</div>{lastOrder.pickupDate}</div>

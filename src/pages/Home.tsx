@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 import NewsletterSub from "../components/newsletter_sub_form/NewsletterSub";
 import GoogleMapComponent from "../components/google_map/GoogleMap";
 
-import styles from "../styles/home.module.scss";
 import CarsSlider from "../components/slider/CarsSlider";
 import RentForm from "../components/forms/rent_form/RentForm";
 
+import styles from "../styles/home.module.scss";
 
 
 const Home = () => {
